@@ -21,7 +21,7 @@ Goal: As a user, I should be able to ...
 - Sign in as an user, in order edit personal selections.
 
 ##User Experience Designs (Wireframes)
-TBA
+To be added.
 
 ##Authors
 - Jared Arkin: https://github.com/arkinjb
