@@ -1,8 +1,11 @@
 # Farmony Markets
 A simple web application to view local farmers markets.
 
+##General Approach
+To be added.
+
 ##Installation Instructions
-Change to the directory to place the repository. Do not place it into a repository with git initialized.
+The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
 
 ```console
 $ cd chosen_directory
@@ -27,8 +30,11 @@ $ git clone https://github.com/siltastic/farmony-markets.git
 To be added.
 
 ```console
-$ 
+$ npm install
 ```
+
+##Major Hurdles
+To be added.
 
 ##Authors
 - Jared Arkin: https://github.com/arkinjb
@@ -37,4 +43,4 @@ $
 - Omari Mayers-Walker: https://github.com/omarimayerswalker
 
 ##Credits
-TBA
+To be added.
