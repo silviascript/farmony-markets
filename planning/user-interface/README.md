@@ -2,7 +2,7 @@
 A simple web application to view local farmers markets.
 
 ##User Interface Designs
-TBA
+To be added.
 
 ##Authors
 - Jared Arkin: https://github.com/arkinjb
