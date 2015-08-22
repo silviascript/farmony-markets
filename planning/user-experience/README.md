@@ -8,12 +8,17 @@ Goal: As a user, I should be able to ...
 - View all available farmers markets in the local area.
 - View all available photographs of the farmers market's vendors.
 - View all contact information (phone, website, etc.) for each vendor.
+- View all farmers markets on a map that is integrated on the website.
+- Search farmers markets in specific locations in the local area.
 
 ######Medium Priorities
-- Know the weather in order to know if the farmers markets 
+- Know the distance for each type of transporation to reach a specific farmers market.
+- Know the price range for each vendor in each farmers markets.
+- Know the weather in order to know if the farmers markets is closed or open.
+- Know which farmers markets accept cash, credit cards, and food stamps.
+- Know which farmers markets sell organic and animal friendly products.
 
 ######Minor Priorities
-
 - Sign up as an admin (vendor), in order to edit vendor information.
 - Sign in as an admin (vendor), in order to add vendor information.
 - Sign in as an admin (vendor), in order to add recipes that relate to their products.
@@ -26,5 +31,5 @@ To be added.
 ##Authors
 - Jared Arkin: https://github.com/arkinjb
 - Silvia Brown: https://github.com/siltastic
-- Laura Nawrocki: https://github.com/LauraWN
 - Omari Mayers-Walker: https://github.com/omarimayerswalker
+- Laura Nawrocki: https://github.com/LauraWN
