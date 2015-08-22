@@ -1,10 +1,17 @@
-// Require Express
+// Require express.
+// Connect express to application.
 var express = require("express");
+var app = express();
 
-// Connect Express to application.
-var app = Express();
+// Connecting to JavaScript
+app.use(express.static('public'));
 
-// Port Listener
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Listening on port 3000");
+// Port listener.
+app.listen(3000, function(){
+  console.log("Listening on port 3000.");
+});
+
+// Connect to browser.
+app.get("/", function(req, res){
+  res.send("Browser time!");
 });
