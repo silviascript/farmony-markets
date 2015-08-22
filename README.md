@@ -8,7 +8,7 @@ To be added.
 The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
 
 ```console
-$ cd chosen_directory
+$ cd to_chosen_directory
 ```
 
 ######To fork:
