@@ -12,7 +12,7 @@ Goal: As a user, I should be able to ...
 - Search farmers markets in specific locations in the local area.
 
 ######Medium Priorities
-- Know the distance for each type of transporation to reach a specific farmers market.
+- Know the distance for each type of transportation to reach a specific farmers market.
 - Know the price range for each vendor in each farmers markets.
 - Know the weather in order to know if the farmers markets is closed or open.
 - Know which farmers markets accept cash, credit cards, and food stamps.
@@ -22,7 +22,7 @@ Goal: As a user, I should be able to ...
 - Sign up as an admin (vendor), in order to edit vendor information.
 - Sign in as an admin (vendor), in order to add vendor information.
 - Sign in as an admin (vendor), in order to add recipes that relate to their products.
-- Sign up as an user, in order to view personal selectons.
+- Sign up as an user, in order to view personal selections.
 - Sign in as an user, in order edit personal selections.
 
 ##User Experience Designs (Wireframes)
