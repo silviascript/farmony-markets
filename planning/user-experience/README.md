@@ -30,7 +30,7 @@ To be added.
 
 ![Image of Farmony Sketches](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_FM_2015_Planning-Sketches.jpg)
 
-![Image of Farmony Homepage Wireframe](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_0000_FM_2015_Web-1.0_Home_Introduction%204.40.33%20PM.jpg)
+![Image of Farmony Homepage Wireframe](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_0000_FM_2015_Web-1.0_Home_Introduction.jpg)
 
 ![Image of Farmony Search Page Wireframe](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_0001_FM_2015_Web-1.1_Home_SearchMarkets.jpg)
 
