@@ -3,7 +3,7 @@
 var express = require("express");
 var app = express();
 
-// Connecting to JavaScript
+// Connecting to public assets.
 app.use(express.static('public'));
 
 // Port listener.
