@@ -4,7 +4,7 @@ var express = require("express");
 var app = express();
 
 // Connecting to public assets.
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 // Port listener.
 app.listen(3000, function(){
