@@ -4,6 +4,9 @@ A simple web application to view local farmers markets.
 ##General Approach
 To be added.
 
+##Major Hurdles
+To be added.
+
 ##Installation Instructions
 The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
 
@@ -32,9 +35,6 @@ To be added.
 ```console
 $ npm install
 ```
-
-##Major Hurdles
-To be added.
 
 ##Authors
 - Jared Arkin: https://github.com/arkinjb
