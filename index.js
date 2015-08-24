@@ -33,34 +33,34 @@ app.get("/markets", function(req,res){
     // var results = apiRouter.marketResults(20001)
     res.render("markets/index", {message: "market route"})
   // })
-})
+});
 
 // Show route for markets.
 app.get("/markets/:id", function(req,res){
   res.render("markets/show", {message: "Info for farmer's market " + req.params.id + "."})
-})
+});
 
 // Index route for vendors.
 app.get("/vendors", function(req,res){
   // Vendor.findAll().then(function(vendors){
     res.render("vendors/index", {message: "List of vendors."})
   // })
-})
+});
 
 // New route for vendors.
 app.get("/vendors/new", function(req,res){
   res.render("vendors/new", {message: "Form for new vendor."})
-})
+});
 
 // Show route for vendors.
 app.get("/vendors/:id", function(req,res){
   res.render("vendors/show", {message: "Info for vendor " + req.params.id + "."})
-})
+});
 
 // Edit route for vendors.
 app.get("/vendors/:id/edit", function(req,res){
   res.render("vendors/edit", {message: "Edit form for vendor " + req.params.id + "."})
-})
+});
 
 // Create new vendor route.
 // app.post("/vendors", function(req,res){
@@ -69,15 +69,9 @@ app.get("/vendors/:id/edit", function(req,res){
 //   })
 // })
 
-
-
 // Port listener.
-// app.listen(3000, function(){
-//   console.log("Listening on port 3000.");
-// });
-
 app.set('port', (process.env.PORT || 3000));
 
 app.listen(app.get('port'), function(){
- console.log("Listening on port 3000");
+ console.log("Listening on port 3000.");
 });
