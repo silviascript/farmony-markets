@@ -57,7 +57,6 @@ app.get("/vendors/:id", function(req,res){
   res.render("vendors/show", {message: "Info for vendor " + req.params.id + "."})
 })
 
-
 // Edit route for vendors.
 app.get("/vendors/:id/edit", function(req,res){
   res.render("vendors/edit", {message: "Edit form for vendor " + req.params.id + "."})
