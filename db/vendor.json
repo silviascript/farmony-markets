@@ -1,0 +1,47 @@
+{
+  "Dupont Circle FRESHFARM Market": [
+    {
+        "name": "Harmony Creek Farm",
+        "addressStreet": "11471 Kings Hill Road",
+        "addressCity": "Bealeton",
+        "addressState": "VA",
+        "addressZip": "22712",
+        "email": "harmonycreekfarm@aol.com",
+        "mapUrl": "https://www.google.com/maps/place/11471+Kings+Hill+Rd,+Bealeton,+VA+22712/@38.558674,-77.803481,17z/data=!3m1!4b1!4m2!3m1!1s0x89b684583a2705f9:0x4a1881d159f130f5",
+        "phone": "5404391109",
+        "product": "Handmade herbal soap.",
+        "paymentCard": true,
+        "paymentCash": true,
+        "paymentOther": "",
+        "paymentSnap": false,
+        "photoUrl": "https://pbs.twimg.com/media/B400UWpCEAAj-ES.jpg:large",
+        "facebookUrl": "https://www.facebook.com/pages/Harmony-Creek-Farm-Handmade-Herbal-Soap/102236379832581",
+        "twitterUrl": "https://twitter.com/HarmonyCrkFarm",
+        "websiteUrl": "http://www.harmonycreekfarm.com"
+    }
+  ],
+
+  "Foggy Bottom FRESHFARM Market": [ 
+    {
+      "name": "Sunnyside Farm and Orchards",
+      "addressStreet": "635 Wheatland Road",
+      "addressCity": "Charles Town",
+      "addressState": "WV",
+      "addressZip": "25414",
+      "email": "",
+      "mapUrl": "https://www.google.com/maps/place/635+Co+Rte+340%2F2,+Charles+Town,+WV+25414/@39.240948,-77.913449,17z/data=!3m1!4b1!4m2!3m1!1s0x89b6076ee460211b:0x4e4da8d3fd6c8eec",
+      "phone": "3047257990",
+      "product": "Peaches and vegetables.",
+      "paymentCard": true,
+      "paymentCash": true,
+      "paymentOther": "",
+      "paymentSnap": false,
+      "photoUrl": "",
+      "facebookUrl": "",
+      "twitterUrl": "",
+      "websiteUrl": "http://sunnysidefarmandorchard.com"
+    }
+  ]
+}
+
+
