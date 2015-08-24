@@ -1,7 +1,10 @@
 module.exports = function(sequelize, DataTypes){
-  return sequelize.definte("vendor", {
+  return sequelize.define("vendor", {
     name: DataTypes.STRING,
-    address: DataTypes.STRING,
+    addressStreet: DataTypes.STRING,
+    addressCity: DataTypes.STRING,
+    addressState: DataTypes.STRING,
+    addressZip: DataTypes.STRING,
     email: DataTypes.STRING,
     mapUrl: DataTypes.STRING,
     phone: DataTypes.STRING,
@@ -13,6 +16,6 @@ module.exports = function(sequelize, DataTypes){
     photoUrl: DataTypes.STRING,
     facebookUrl: DataTypes.STRING,
     twitterUrl: DataTypes.STRING,
-    websiteUrl: DataTypes.STRING,
+    websiteUrl: DataTypes.STRING
   });
 }
