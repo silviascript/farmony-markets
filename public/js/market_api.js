@@ -1,6 +1,6 @@
 // Farmers Market API
 
-module.exports = {
+var farmersMarketApi = {
     sayHello: function() {
         console.log("Hello! Market API")
     },
