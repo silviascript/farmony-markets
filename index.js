@@ -6,12 +6,15 @@ var app = express();
 // Connect path middleware
 var path = require("path");
 
-
+// Connect bodyparser middleware
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connecting to public assets.
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
-// set up hbs
+// Set up hbs
 app.set("view engine", "hbs");
 
 // Port listener.
