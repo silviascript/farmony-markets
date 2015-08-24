@@ -1,18 +1,21 @@
 [
     {
-        "name": "Dolcezza Gelato & Coffee",
-        "address": "",
-        "email": "",
+        "name": "Harmony Creek Farm",
+        "addressStreet": "11471 Kings Hill Road",
+        "addressCity": "Bealeton",
+        "addressState": "VA",
+        "addressZip": "22712",
+        "email": "harmonycreekfarm@aol.com",
         "mapUrl": "",
-        "phone": "",
-        "product": "",
-        "paymentCard": "",
-        "paymentCash": "",
+        "phone": "5404391109",
+        "product": "Handmade Herbal Soap",
+        "paymentCard": true,
+        "paymentCash": true,
         "paymentOther": "",
-        "paymentSnap": "",
-        "photoUrl": "",
-        "facebookUrl": "",
-        "twitterUrl": "",
-        "websiteUrl": ""
+        "paymentSnap": false,
+        "photoUrl": "https://pbs.twimg.com/media/B400UWpCEAAj-ES.jpg:large",
+        "facebookUrl": "https://www.facebook.com/pages/Harmony-Creek-Farm-Handmade-Herbal-Soap/102236379832581",
+        "twitterUrl": "https://twitter.com/HarmonyCrkFarm",
+        "websiteUrl": "http://www.harmonycreekfarm.com"
     }
 ]
