@@ -3,6 +3,6 @@ var FarmonyDatabase = require("./connection");
 
 // Require the connection to data files.
 var data = {
-  markets: require("./market_data"),
-  vendors: require("./vendor_data")
+  markets: require("./market"),
+  vendors: require("./vendor")
 }
