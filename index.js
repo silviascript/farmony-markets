@@ -20,11 +20,6 @@ app.set("view engine", "hbs");
 // Farmers Market API
 // var apiRouter = require("./public/js/market_api.js")
 
-// Port listener.
-app.listen(3000, function(){
-  console.log("Listening on port 3000.");
-});
-
 // Connect to browser.
 app.get("/", function(req, res){
   res.render("index", {message: "Handlebars is the best."})
@@ -35,12 +30,8 @@ app.get("/", function(req, res){
 app.get("/markets", function(req,res){
     // console.log(apiRouter.sayHello())
   // Market.findAll().then(function(markets){
-<<<<<<< HEAD
     // var results = apiRouter.marketResults(20001)
     res.render("markets/index", {message: "market route"})
-=======
-    res.render("markets/index", {message: "list of markets and a map."})
->>>>>>> a74e2da092b01d8497db2f154f88d85ac1bde800
   // })
 })
 
@@ -77,3 +68,16 @@ app.get("/vendors/:id/edit", function(req,res){
 //     res.json(vendor);
 //   })
 // })
+
+
+
+// Port listener.
+// app.listen(3000, function(){
+//   console.log("Listening on port 3000.");
+// });
+
+app.set('port', (process.env.PORT || 3000));
+
+app.listen(app.get('port'), function(){
+ console.log("Listening on port 3000");
+});
