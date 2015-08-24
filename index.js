@@ -18,7 +18,7 @@ app.use("/public", express.static(path.join(__dirname + "/public")));
 app.set("view engine", "hbs");
 
 // Farmers Market API
-var farmersMarketApi = require("./public/js/market_api.js")
+var apiRouter = require("./public/js/market_api.js")
 
 // Port listener.
 app.listen(3000, function(){
@@ -33,9 +33,10 @@ app.get("/", function(req, res){
 
 // Index route for markets
 app.get("/markets", function(req,res){
+    console.log(apiRouter.sayHello())
   // Market.findAll().then(function(markets){
-    farmersMarketApi.sayHello()
-    res.render("markets/index", {message: "list of markets and a map"})
+    var results = apiRouter.marketResults(20001)
+    res.render("markets/index", {message: results})
   // })
 })
 
