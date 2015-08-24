@@ -17,6 +17,9 @@ app.use("/public", express.static(path.join(__dirname + "/public")));
 // Set up hbs
 app.set("view engine", "hbs");
 
+// Farmers Market API
+var farmersMarketApi = require("./public/js/market_api.js")
+
 // Port listener.
 app.listen(3000, function(){
   console.log("Listening on port 3000.");
@@ -31,6 +34,7 @@ app.get("/", function(req, res){
 // Index route for markets
 app.get("/markets", function(req,res){
   // Market.findAll().then(function(markets){
+    farmersMarketApi.sayHello()
     res.render("markets/index", {message: "list of markets and a map"})
   // })
 })
