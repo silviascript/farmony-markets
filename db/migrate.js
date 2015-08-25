@@ -1,7 +1,7 @@
 // Require the connection JavaScript file.
-var FarmonyDatabase = require("./connection");
+var farmonyDatabase = require("./connection");
 
 // Sync.
-FarmonyDatabase.do.sync({force: true}).then(function(){
+farmonyDatabase.sequelize.sync({force: true}).then(function(){
   process.exit();
 });

@@ -1,5 +1,5 @@
 // Require the connection JavaScript file.
-var FarmonyDatabase = require("./connection");
+var farmonyDatabase = require("./connection");
 
 // Require the connection to data files.
 var data = {
