@@ -1,9 +1,10 @@
-// Require express.
+// Require express to application.
+// Connect Sass to application.
 // Connect express to application.
-var express = require("express");
-var app = express();
-
 // Connect path middleware.
+var express = require("express");
+var sassMiddleware = require('node-sass-middleware');
+var app = express();
 var path = require("path");
 
 // Connect bodyparser middleware.
@@ -12,15 +13,23 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connecting to public assets.
+app.use(sassMiddleware({
+  src: __dirname  + '/public/sass',
+  dest: path.join(__dirname, '/public/'),
+  debug: true,
+  outputStyle: 'compressed',
+  prefix:  '/prefix'
+}));
+
 app.use("/public", express.static(path.join(__dirname + "/public")));
 
-// Set up HBS.
+// Set up the HBS.
 app.set("view engine", "hbs");
 
-// Farmers Market API
+// Connect to the Farmers Market API.
 // var apiRouter = require("./public/js/market_api.js")
 
-// Connect to browser.
+// Connect to the browser.
 app.get("/", function(req, res){
   res.render("index", {message: "Handlebars is the best."})
   // res.send("Browser time!");
@@ -28,7 +37,7 @@ app.get("/", function(req, res){
 
 // Index route for markets.
 app.get("/markets", function(req,res){
-    // console.log(apiRouter.sayHello())
+  // console.log(apiRouter.sayHello())
   // Market.findAll().then(function(markets){
     // var results = apiRouter.marketResults(20001)
     res.render("markets/index", {message: "market route"})
