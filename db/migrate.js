@@ -2,6 +2,6 @@
 var farmonyDatabase = require("./connection");
 
 // Sync.
-farmonyDatabase.sequelize.sync({force: true}).then(function(){
+farmonyDatabase.databaseConnection.sync({force: true}).then(function(){
   process.exit();
 });
