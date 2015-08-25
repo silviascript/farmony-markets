@@ -18,8 +18,8 @@ if (process.env.DATABASE_URL) {
 
 // Create farmers market model.
 // // Create vendors model.
-// var Market = databaseConnection.import("../models/market");
-// var Vendor = databaseConnection.import("../models/vendor");
+var Market = databaseConnection.import("../models/market");
+var Vendor = databaseConnection.import("../models/vendor");
 
 // Vendors belong to many Farmers Markets.
 // Farmers Markets have many vendors.
