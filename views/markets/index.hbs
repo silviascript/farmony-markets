@@ -62,24 +62,24 @@
                         var results = detailresults[key];
                         alert(results['GoogleLink']);
                     }
-                },
-                localWeather: function(zip) {
-                    var url = "http://api.wunderground.com/api/b0900ea853660a3f/conditions/q/MD/baltimore.json"
-                    $.ajax({
-                        url: url,
-                        type: "GET",
-                        dataType: 'json',
-                    }).done(function(response) {
-                        console.log("ajax request success!")
-                        console.log(response)
-                    });
                 }
             }
-<<<<<<< Updated upstream
-        }
-        /*         farmersMarketApi.marketResults(20001) */
-=======
             /*         farmersMarketApi.marketResults(20001) */
->>>>>>> Stashed changes
+        var weatherApi = {
+            // weather results by zipcode
+            localWeather: function(state, city) {
+                var url = "http://api.wunderground.com/api/b0900ea853660a3f/geolookup/q/" + state + "/" + city + ".json"
+                $.ajax({
+                    url: url,
+                    type: "GET",
+                    dataType: "json"
+                }).done(function(response) {
+                    console.log("weather ajax request success!")
+                    console.log(response.current_observation.weather)
+                })
+            }
+        }
+        weatherApi.localWeather("MD", "Baltimore")
+
     })
 </script>
