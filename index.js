@@ -78,6 +78,20 @@ app.get("/vendors/:id/edit", function(req,res){
 //   })
 // })
 
+// Create route for about.
+app.get('/about', function(req, res){
+  res.render('about', {
+    title: 'About'
+  });
+});
+
+// Create route for contact.
+app.get('/contact', function(req, res){
+  res.render('contact', {
+    title: 'Contact'
+  });
+});
+
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
 
