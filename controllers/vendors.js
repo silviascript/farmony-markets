@@ -13,10 +13,16 @@ router.get("/vendors", function(req, res){
   });
 });
 
+// New vendor form
+
+router.get("/vendors/new", function(req, res){
+    res.render("vendors/new")
+})
+
 // Create vendors
 router.post("/vendors", function(req, res){
   Vendor.create(req.body).then(function(vendor){
-    res.json(vendor);
+    res.redirect("/vendors/" + vendor.id);
   });
 });
 
