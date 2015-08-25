@@ -68,7 +68,7 @@
         var weatherApi = {
             // weather results by zipcode
             localWeather: function(state, city) {
-                var url = "http://api.wunderground.com/api/b0900ea853660a3f/geolookup/q/" + state + "/" + city + ".json"
+                var url = "http://api.wunderground.com/api/b0900ea853660a3f/conditions/q/" + state + "/" + city + ".json"
                 $.ajax({
                     url: url,
                     type: "GET",
