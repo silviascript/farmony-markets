@@ -35,7 +35,7 @@ app.set("view engine", "hbs");
 // using connected exports
 // disabled until routes/views are updated
 
-// app.use("/", vendorsController);
+app.use("/", vendorsController);
 
 // Connect to the browser.
 app.get("/", function(req, res){

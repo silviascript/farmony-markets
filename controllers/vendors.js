@@ -9,7 +9,7 @@ function error(response, message){
 // All vendors
 router.get("/vendors", function(req, res){
   Vendor.findAll().then(function(vendors){
-    res.json(vendors);
+      res.render("vendors/index", {vendors: vendors});
   });
 });
 
