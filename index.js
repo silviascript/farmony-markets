@@ -3,7 +3,7 @@
 // Connect express to application.
 // Connect path middleware.
 var express = require("express");
-var sassMiddleware = require('node-sass-middleware');
+var sassMiddleware = require("node-sass-middleware");
 var app = express();
 var path = require("path");
 
@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Connecting to public assets.
 app.use(sassMiddleware({
-  src: __dirname  + '/public/sass',
-  dest: path.join(__dirname, '/public/'),
+  src: __dirname  + '/public/sass/',
+  dest: path.join(__dirname, '/public/css/'),
   debug: true,
   outputStyle: 'compressed',
-  prefix:  '/prefix'
+  prefix: '/prefix'
 }));
 
 app.use("/public", express.static(path.join(__dirname + "/public")));
@@ -79,8 +79,8 @@ app.get("/vendors/:id/edit", function(req,res){
 // })
 
 // Port listener.
-app.set('port', (process.env.PORT || 3000));
+app.set("port", (process.env.PORT || 3000));
 
-app.listen(app.get('port'), function(){
+app.listen(app.get("port"), function(){
  console.log("Listening on port 3000.");
 });
