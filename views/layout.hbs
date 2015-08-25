@@ -3,6 +3,8 @@
 
 <head>
     <title>Farmony</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
     <link rel="stylesheet" type="text/css" href="/styles.css">
     <script src="/public/js/jquery.js"></script>
     <script src="/public/js/script.js"></script>
@@ -24,30 +26,43 @@
 </head>
 
 <body>
-    <h1>Farmony</h1>
-    <nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Farmony</a></li>
+                <li><a href="#">Markets</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </nav>
-    {{{body}}}
+    <main>
+        {{{body}}}
 
-    <div id="map"></div>
-    <script type="text/javascript">
-        var map;
+        <div id="map"></div>
+        <script type="text/javascript">
+            var map;
 
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: 38.912,
-                    lng: -77.018
-                },
-                zoom: 12
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap">
-    </script>
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: {
+                        lat: 38.912,
+                        lng: -77.018
+                    },
+                    zoom: 12
+                });
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap">
+        </script>
 
 
 </body>
+</main>
+
+<footer>
+    <p>Footer text.</p>
+</footer>
 
 </html>
