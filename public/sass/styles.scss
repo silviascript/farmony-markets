@@ -1,0 +1,55 @@
+// Import Google Fonts
+
+
+// Base Brand Colors
+// $bc-primary:;
+// $bc-secondary:;
+// $bc-tertiary:;
+// $fc-primary:;
+// $fc-secondary:;
+// $fc-tertiary:;
+
+
+// Base Font Format
+$base-font-size: 1em;
+$base-font-print-header: 1em;
+$base-font-print-text: 1em;
+$base-font-line-height: 1.5em;
+
+
+// Base Font Weights
+
+
+// Base Styling Treatments
+$grid-margin: 1em;
+$grid-padding: 1em;
+$margin-small: 1em;
+$padding-small: 1em;
+$padding-medium: 2em;
+$padding-large: 3em;
+
+
+// Base Format
+html {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
