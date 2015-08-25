@@ -12,6 +12,9 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// Connect Controllers
+var vendorsController = require("./controllers/vendors.js");
+
 // Connecting to public assets.
 app.use(sassMiddleware({
   src: __dirname  + '/public/sass/',
@@ -29,10 +32,15 @@ app.set("view engine", "hbs");
 // Connect to the Farmers Market API.
 // var apiRouter = require("./public/js/market_api.js")
 
+// using connected exports
+// disabled until routes/views are updated
+
+// app.use("/", vendorsController);
+
 // Connect to the browser.
 app.get("/", function(req, res){
   res.render("index", {message: "Handlebars is the best."})
-  // res.send("Browser time!");
+  res.send("Browser time!");
 });
 
 // Index route for markets.
@@ -91,6 +99,7 @@ app.get('/contact', function(req, res){
     title: 'Contact'
   });
 });
+
 
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
