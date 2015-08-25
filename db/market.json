@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Dupont Circle FRESHFARM Market",
+    "addressStreet": "1500 20th Street, NW",
+    "addressCity": "Washington",
+    "addressState": "District of Columbia",
+    "addressZip": "20036",
+    "email": "dupont@freshfarmmarket.org",
+    "mapUrl": "https://www.google.com/maps/place/38°54'37.2%22N+77°02'40.9%22W/@38.91034,-77.04469,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en",
+    "phone": "2023628889",
+    "product": "Food",
+    "paymentCard": true,
+    "paymentCash": true,
+    "paymentOther": "SFMNP & Wic",
+    "paymentSnap": true,
+    "photoUrl": "",
+    "facebookUrl": "",
+    "twitterUrl": "",
+    "vendorsNumber": 42,
+    "websiteUrl": "http://www.freshfarmmarkets.org/farmers_markets/markets/dupont_circle.php"
+  },
+
+  {
+    "name": "Foggy Bottom FRESHFARM Market",
+    "addressStreet": "2400 I Street NW",
+    "addressCity": "Washington",
+    "addressState": "District of Columbia",
+    "addressZip": "20037",
+    "email": "foggybottom@freshfarmmarkets.org",
+    "mapUrl": "https://www.google.com/maps/place/2400+I+St+NW,+Washington,+DC+20037/@38.900497,-77.052347,17z/data=!3m1!4b1!4m2!3m1!1s0x89b7b7b3b4e7b6c1:0xbabd9a208187eb7f",
+    "phone": "2023628889",
+    "product": "Food",
+    "paymentCard": true,
+    "paymentCash": true,
+    "paymentOther": "",
+    "paymentSnap": true,
+    "photoUrl": "",
+    "facebookUrl": "",
+    "twitterUrl": "",
+    "vendorsNumber": ,
+    "websiteUrl": "http://www.freshfarmmarkets.org/farmers_markets/markets/foggy_bottom.php"
+  }
+]
