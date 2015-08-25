@@ -29,7 +29,7 @@ Market.hasMany(Vendor);
 // Add module exports for sequelize and models.
 module.exports = {
   Sequelize: Sequelize,
-  sequelize: databaseConnection,
+  databaseConnection: databaseConnection,
   models: {
     Vendor: Vendor,
     Market: Market
