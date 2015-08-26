@@ -17,7 +17,7 @@
           <li><a href="/">Farmony</a></li>
           <!--<li><a href="/markets">Markets</a></li>-->
           <!--<li><a href="/vendors">Vendors</a></li>-->
-          <li><a href="/about">About</a></li>
+          <li><a href="/about" id="about">About</a></li>
           <li><a href="/contact">Contact</a></li>
           <!--<li><a href="#">Sign In</a></li>-->
           <!--<li><a href="#">Sign Up</a></li>-->
@@ -28,33 +28,10 @@
         <p>Some text.</p>
       </div>
     </header>
-
-    <br><br><br><br><br><br><br>
     
     <!-- Main Content -->
     <main class="site-content grid-row">
-      <!-- Farmers Markets -->
-      <div class="grid-col grid-col-7">
-        <p>Lists</p>
-      </div>
-      
-      <!-- Google Maps -->
-      <div class="grid-col grid-col-5" id="map">
-        <script type="text/javascript">
-            var map;
-
-            function initMap(userLat, userLng) {
-                map = new google.maps.Map(document.getElementById('map'), {
-                    center: {
-                        lat: 38.912,
-                        lng: -77.018
-                    },
-                    zoom: 12
-                });
-            }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap"></script>
-      </div>
+      {{{body}}}
     </main>
     
     <!-- Footer -->
@@ -65,8 +42,8 @@
     </footer>
   </div> <!-- Closes "#site-container" -->  
 
-    <!-- JavaScript -->
-    <script src="/public/js/jquery.js"></script>
-    <script src="/public/js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="/public/js/jquery.js"></script>
+  <script src="/public/js/script.js"></script>
 </body>
 </html>
