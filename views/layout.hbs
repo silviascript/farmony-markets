@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Farmony</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +9,9 @@
     <script src="/public/js/jquery.js"></script>
     <script src="/public/js/script.js"></script>
     <style type="text/css">
-     html,
-     body, main {
+        html,
+        body,
+        main {
             height: 100%;
             margin: 0;
             padding: 0;
@@ -17,9 +19,59 @@
         #map {
             height: 100%;
         }
+        <!-- CSS styles for standard search box --> #tfheader {
+            background-color: #c3dfef;
+        }
+        #tfnewsearch {
+            float: right;
+            padding: 20px;
+        }
+        .tftextinput {
+            margin: 0;
+            padding: 5px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            border: 1px solid #0076a3;
+            border-right: 0px;
+            border-top-left-radius: 5px 5px;
+            border-bottom-left-radius: 5px 5px;
+        }
+        .tfbutton {
+            margin: 0;
+            padding: 5px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            color: #ffffff;
+            border: solid 1px #0076a3;
+            border-right: 0px;
+            background: #0095cd;
+            background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+            background: -moz-linear-gradient(top, #00adee, #0078a5);
+            border-top-right-radius: 5px 5px;
+            border-bottom-right-radius: 5px 5px;
+        }
+        .tfbutton:hover {
+            text-decoration: none;
+            background: #007ead;
+            background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+            background: -moz-linear-gradient(top, #0095cc, #00678e);
+        }
+        /* Fixes submit button height problem in Firefox */
+        .tfbutton::-moz-focus-inner {
+            border: 0;
+        }
+        .tfclear {
+            clear: both;
+        }
     </style>
+</head>
 
-<!-- <div class="column-1">Column 1</div>
+<body>
+    <!-- <div class="column-1">Column 1</div>
 <div class="column-2">Column 2</div>
 <div class="column-3">Column 3</div>
 <div class="column-4">Column 4</div>
@@ -32,29 +84,29 @@
 <div class="column-11">Column 11</div>
 <div class="column-12">Column 12</div>
    -->
-   <div class="row header">
-    <div class="column column-2">Logo</div>
-    <div class="column column-4">-</div>
-    <div class="column column-6">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>FAQ</li>
-      </ul>
+    <div class="row header">
+        <div class="column column-2">Logo</div>
+        <div class="column column-4">-</div>
+        <div class="column column-6">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <div class="row middle">
-    <div class="column column-2">-</div>
-    <div class="column column-8">So much content.</div>
-    <div class="column column-2">-</div>
-  </div>
-  <div class="row footer">
-    <div class="column column-12">(c) Maseda Industries, 2015.</div>
-  </div>
+    <div class="row middle">
+        <div class="column column-2">-</div>
+        <div class="column column-8">So much content.</div>
+        <div class="column column-2">-</div>
+    </div>
+    <div class="row footer">
+        <div class="column column-12">(c) Maseda Industries, 2015.</div>
+    </div>
 
-  <!-- Header & Navigation -->
-  <!-- <header class="site-content">
+    <!-- Header & Navigation -->
+    <!-- <header class="site-content">
     <nav class="site-nav">
       <ul class="nav-list">
         <li><a href="#">Farmony</a></li>
@@ -65,8 +117,8 @@
     </nav>
   </header> -->
 
-  <!-- Market Search -->
-  <!-- <div class="site-search">
+    <!-- Market Search -->
+    <!-- <div class="site-search">
     <form action="/" method="get" >
       <label for="search">Search:</label>
       <input name="search">
@@ -78,13 +130,13 @@
     </form>
   </div> -->
 
-  <!-- Content -->
-  <!-- <main class="site-content">
+    <!-- Content -->
+    <!-- <main class="site-content">
     {{{body}}}
   </main> -->
 
-  <!-- Footer -->
-  <!-- <footer class="site-footer">
+    <!-- Footer -->
+    <!-- <footer class="site-footer">
     <p>Footer text.</p>
   </footer> -->
 
@@ -101,6 +153,15 @@
 
     <main>
         {{{body}}}
+
+        <!-- SEARCH BAR -->
+        <div id="tfheader">
+            <form id="tfnewsearch" method="get" action="">
+                <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
+                <input type="submit" value="search" class="tfbutton">
+            </form>
+            <div class="tfclear"></div>
+        </div>
 
         <div id="map"></div>
         <script type="text/javascript">
@@ -119,10 +180,11 @@
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap">
         </script>
 
-  </main>
-  
-  <footer>
-    <p>Footer text.</p>
-  </footer>
+    </main>
+
+    <footer>
+        <p>Footer text.</p>
+    </footer>
 </body>
+
 </html>
