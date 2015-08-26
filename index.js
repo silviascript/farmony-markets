@@ -15,6 +15,48 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Connect Controllers
 var vendorsController = require("./controllers/vendors.js");
 
+//needed for twitter OAuth (passport, passport-twitter)
+var env = require("./env")
+var session = require("express-session")
+var passport = require("passport");
+var TwitterStrategy = require("passport-twitter").Strategy;
+app.use(session({
+  secret: "ninja please"
+}))
+passport.serializeUser(function(user, done) {
+  done(null, user)
+})
+passport.deserializeUser(function(obj, done) {
+  done(null, obj)
+})
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new TwitterStrategy({
+  consumerKey: env.consumerKey,
+  consumerSecret: env.consumerSecret,
+  callbackUrl: env.callbackUrl
+},  function(aToken, aTokenSecret, aProfile, done){
+  token = aToken
+  tokenSecret = aTokenSecret
+  profile = aProfile
+  done(null, profile)
+}))
+
+//routes for twitter OAuth
+app.get("/auth/twitter", passport.authenticate("twitter"), function (req, res){})
+app.get("/auth/twitter/callback", passport.authenticate('twitter'), function(req, res){
+  req.session.token = token
+  req.session.tokenSecret = tokenSecret
+  req.session.profile = profile
+  res.redirect("/vendors")
+})
+app.get("/signout", function(req, res){
+  req.session.destroy()
+  res.redirect("/vendors")
+})
+
+
 // Connecting to public assets.
 app.use(sassMiddleware({
   src: __dirname  + '/public/sass/',
@@ -72,8 +114,8 @@ app.get('/contact', function(req, res){
 });
 
 // Port listener.
-app.set("port", (process.env.PORT || 3000));
+app.set("port", (process.env.PORT || 3001));
 
 app.listen(app.get("port"), function(){
- console.log("Listening on port 3000.");
+ console.log("Listening on port 3001.");
 });

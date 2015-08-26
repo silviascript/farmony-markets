@@ -1,4 +1,11 @@
+{{#if user}}
+  Logged in as {{user.displayName}}
+  {{else}}
+  <a href='/auth/twitter'>Please log in with Twitter.</a>
+  {{/if}}
+
 <h2>Vendors<a href="/vendors/new">(+)</a></h2>
+
 
 <ul>
   {{#each vendors}}
