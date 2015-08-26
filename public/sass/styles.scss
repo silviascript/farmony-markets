@@ -1,7 +1,4 @@
-// Import Google Fonts
-
-
-// Base Brand columnors
+// Base Brand
 // $bc-primary:;
 // $bc-secondary:;
 // $bc-tertiary:;
@@ -11,6 +8,10 @@
 
 
 // Base Font Format
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Noto Serif', serif;
+
+
 $base-font-size: 1em;
 $base-font-print-header: 1em;
 $base-font-print-text: 1em;
@@ -56,142 +57,93 @@ ul {
 
 
 // Base Grid Format
-.row {
+.grid-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: $grid-margin;
+  // margin-top: $grid-margin;
+  width: 100%;
 }
 
-.column {
+.grid-col {
+  background-clip: content-box;
+  // background-color: red;
+  border: 1px solid black; // Remove later.
   flex: 1 1 8%;
-  margin-bottom: $grid-margin;
-  padding: $padding-small;
+  // margin-bottom: $grid-margin;
+  // padding: $padding-small;
 }
 
-.column-1 {
+.grid-col-1 {
+  background-color: red;
   flex-basis: 8.3333%;
 }
 
-.column-2 {
+.grid-col-2 {
+  background-color: green;
   flex-basis: 16.6666%; 
 }
 
-.column-3 {
+.grid-col-3 {
   flex-basis: 25%;
 }
 
-.column-4 {
+.grid-col-4 {
   flex-basis: 33.3333%;
 }
 
-.column-5 {
+.grid-col-5 {
   flex-basis: 41.6666%;
 }
 
-.column-6 {
+.grid-col-6 {
   flex-basis: 50%;
 }
 
-.column-7 {
+.grid-col-7 {
   flex-basis: 58.3333%;
 }
 
-.column-8 {
+.grid-col-8 {
   flex-basis: 66.6666%;
 }
 
-.column-9 {
+.grid-col-9 {
   flex-basis: 75%;
 }
 
-.column-10 {
+.grid-col-10 {
   flex-basis: 83.3333%;
 }
 
-.column-11 {
+.grid-col-11 {
   flex-basis: 91.6666%;
 }
 
-.column-12 {
+.grid-col-12 {
+  background-color: orange;
   flex-basis: 100%;
 }
 
+@media all and (min-width: 568px) { // Change to em or a variable with an em.
+  .grid-col-1, .grid-col-2,
+  .grid-col-3, .grid-col-4,
+  .grid-col-5 {
+    flex-basis: 50%;
+  }
 
-
-/* nested grids */
-// .row .row, .row.nested {
-//   flex: 1 1 auto;
-//   margin-top: -0.5em;
-// }
-
-// /* full width grids */
-// .row.wide-fit {
-//   margin-left: -10px;
-//   margin-right: -10px;
-// }
-
-// /* center grids */
-// .row.center {
-//   justify-content: center;
-// }
-
-// .center .column {
-//   flex-grow: 0;
-//   flex-shrink: 0;
-// }
-
-// /* columnumns widths */
-
-
-
-// /* examples */
-
-// .fixed-width {
-//   flex: 0 0 500px;
-// }
-
-// @media all and (max-width: 568px) {
-//   .column-1,
-//   .column-2,
-//   .column-3,
-//   .column-4,
-//   .column-5 {
-//     flex-basis: 50%;
-//   }
-
-//   .column-6,
-//   .column-7,
-//   .column-8,
-//   .column-9,
-//   .column-10,
-//   .column-11 {
-//     flex-basis: 100%;
-//   }
-
-//   .nested .column {
-//     flex-basis: 100%;
-//   }
-  
-// }
-
-// /* eye candy */
-// .column {
-//   background-color: red;
-//   background-clip: content-box;
-//   border: 1px solid rgba(0,0,0,0.1);
-// }
-
-
-
-
+  .grid-col-6, .grid-col-7,
+  .grid-col-8, .grid-col-9,
+  .grid-col-10, .grid-col-11 {
+    flex-basis: 100%;
+  }
+}
 
 
 // Navigation: Logo, Links, & Social
 .site-header {
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 2;
 }
 
@@ -200,7 +152,7 @@ ul {
   flex-direction: row;
   flex-wrap: nowrap;
   line-height: 3em;
-  width: 100%;
+  overflow: hidden;
 
   li {
     flex: 0 1 auto;
