@@ -1,6 +1,7 @@
 
 {{#if user}}
   Logged in as {{user.displayName}}
+  <p><a href='/signout'>Log Out</a></p>
 {{else}}
   <a href='/auth/twitter'>Please log in with Twitter.</a>
 {{/if}}
