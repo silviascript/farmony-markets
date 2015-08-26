@@ -29,14 +29,10 @@ $padding-medium: 2em;
 $padding-large: 3em;
 
 
-// Base Grid Format
-
-
 // Base Format
 html {
   background: peachpuff;
   box-sizing: border-box;
-  font-size: 12px;
 }
 
 *, *:before, *:after {
@@ -59,44 +55,19 @@ ul {
 }
 
 
-
+// Base Grid Format
 .row {
-  margin-top: 0.5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: $grid-margin;
 }
 
 .column {
   flex: 1 1 8%;
-  margin: 0 0 0.5rem 0;
-  padding: 0.5em 10px;
-  box-sizing: border-box;
+  margin-bottom: $grid-margin;
+  padding: $padding-small;
 }
-
-/* nested grids */
-.row .row, .row.nested {
-  flex: 1 1 auto;
-  margin-top: -0.5em;
-}
-
-/* full width grids */
-.row.wide-fit {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-/* center grids */
-.row.center {
-  justify-content: center;
-}
-
-.center .column {
-  flex-grow: 0;
-  flex-shrink: 0;
-}
-
-/* columnumns widths */
 
 .column-1 {
   flex-basis: 8.3333%;
@@ -146,42 +117,70 @@ ul {
   flex-basis: 100%;
 }
 
-/* examples */
 
-.fixed-width {
-  flex: 0 0 500px;
-}
 
-@media all and (max-width: 568px) {
-  .column-1,
-  .column-2,
-  .column-3,
-  .column-4,
-  .column-5 {
-    flex-basis: 50%;
-  }
+/* nested grids */
+// .row .row, .row.nested {
+//   flex: 1 1 auto;
+//   margin-top: -0.5em;
+// }
 
-  .column-6,
-  .column-7,
-  .column-8,
-  .column-9,
-  .column-10,
-  .column-11 {
-    flex-basis: 100%;
-  }
+// /* full width grids */
+// .row.wide-fit {
+//   margin-left: -10px;
+//   margin-right: -10px;
+// }
 
-  .nested .column {
-    flex-basis: 100%;
-  }
+// /* center grids */
+// .row.center {
+//   justify-content: center;
+// }
+
+// .center .column {
+//   flex-grow: 0;
+//   flex-shrink: 0;
+// }
+
+// /* columnumns widths */
+
+
+
+// /* examples */
+
+// .fixed-width {
+//   flex: 0 0 500px;
+// }
+
+// @media all and (max-width: 568px) {
+//   .column-1,
+//   .column-2,
+//   .column-3,
+//   .column-4,
+//   .column-5 {
+//     flex-basis: 50%;
+//   }
+
+//   .column-6,
+//   .column-7,
+//   .column-8,
+//   .column-9,
+//   .column-10,
+//   .column-11 {
+//     flex-basis: 100%;
+//   }
+
+//   .nested .column {
+//     flex-basis: 100%;
+//   }
   
-}
+// }
 
-/* eye candy */
-.column {
-  background-color: red;
-  background-clip: content-box;
-  border: 1px solid rgba(0,0,0,0.1);
-}
+// /* eye candy */
+// .column {
+//   background-color: red;
+//   background-clip: content-box;
+//   border: 1px solid rgba(0,0,0,0.1);
+// }
 
 
 
