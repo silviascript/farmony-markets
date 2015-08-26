@@ -48,7 +48,7 @@ app.get("/", function(req, res){
 
 app.get("/search", function(req, res){
     console.log(req.query.q)
-    search.vendorSearch(req.query.q)
+    search.marketSearch(req.query.q)
     res.send("search complete")
 })
 
