@@ -21,10 +21,17 @@ router.get("/vendors/new", function(req, res){
 
 // Create vendors
 router.post("/vendors", function(req, res){
+    console.log("search1")
   Vendor.create(req.body).then(function(vendor){
+      console.log("search2")
     res.redirect("/vendors/" + vendor.id);
   });
 });
+
+router.post("/vendors/", function(req,res){
+    console.log("search result")
+    res.show("res.show: search result")
+})
 
 // Find vendor by ID
 router.get("/vendors/:id", function(req, res){
