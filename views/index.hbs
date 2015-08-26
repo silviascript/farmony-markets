@@ -1,2 +1,21 @@
-<div class="markets"></div>
-{{message}}
+<div class="grid-col grid-col-7">
+  <p>Lists</p>
+</div>
+
+<!-- Google Maps -->
+<div class="grid-col grid-col-5" id="map">
+  <script type="text/javascript">
+      var map;
+
+      function initMap(userLat, userLng) {
+          map = new google.maps.Map(document.getElementById('map'), {
+              center: {
+                  lat: 38.912,
+                  lng: -77.018
+              },
+              zoom: 12
+          });
+      }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap"></script>
+</div>
