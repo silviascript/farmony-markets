@@ -11,10 +11,9 @@
     <script src="/public/js/script.js"></script>
 </head>
 <body>
-  <div class="site-container">
     <!-- Header & Navigation -->
     <header class="site-header grid-row">
-      <nav class="site-nav grid-col grid-col-12">
+      <nav class="grid-col grid-col-12">
         <ul class="nav-list">
           <li><a href="/">Farmony</a></li>
           <!--<li><a href="/markets">Markets</a></li>-->
@@ -25,25 +24,23 @@
           <!--<li><a href="#">Sign Up</a></li>-->
         </ul>
       </nav>
+
+      <div class="grid-col grid-col-12">
+        <p>Some text.</p>
+      </div>
     </header>
 
-  <!-- Market Search -->
-  <div class="site-search">
-    <form action="/" method="get" >
-      <label for="search">Search:</label>
-      <input name="search">
-
-      <label for="location">Location:</label>
-      <input name="location">
-
-      <input type="submit" value="Search">
-    </form>
-  </div>
-
-    <main>
-        {{{body}}}
-
-        <div id="map"></div>
+    <br><br><br><br><br><br><br>
+    
+    <!-- Main Content -->
+    <main class="site-content grid-row">
+      <!-- Farmers Markets -->
+      <div class="grid-col grid-col-7">
+        <p>Lists</p>
+      </div>
+      
+      <!-- Google Maps -->
+      <div class="grid-col grid-col-5" id="map">
         <script type="text/javascript">
             var map;
 
@@ -57,14 +54,15 @@
                 });
             }
         </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap">
-        </script>
-
-  </main>
-  
-  <footer>
-    <p>Footer text.</p>
-  </footer>
-  </div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD53btb2ux82C_e-hUuaZppIasFzr7-utg&callback=initMap"></script>
+      </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="grid-row">
+      <div class="grid-col grid-col-12">
+        <p>Footer text.</p>
+      </div>
+    </footer>
 </body>
 </html>
