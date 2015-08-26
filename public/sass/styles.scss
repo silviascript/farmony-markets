@@ -31,13 +31,18 @@ $padding-large: 3em;
 
 
 // Base Format
-html {
+// html {
+//   box-sizing: inherit;
+//   height: 100%;
+// }
+
+body {
   background: peachpuff;
-  box-sizing: border-box;
+  font-size: 12px;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -125,19 +130,19 @@ ul {
   flex-basis: 100%;
 }
 
-@media all and (min-width: 568px) { // Change to em or a variable with an em.
-  .grid-col-1, .grid-col-2,
-  .grid-col-3, .grid-col-4,
-  .grid-col-5 {
-    flex-basis: 50%;
-  }
+// @media all and (min-width: 568px) { // Change to em or a variable with an em.
+  // .grid-col-1, .grid-col-2,
+  // .grid-col-3, .grid-col-4,
+  // .grid-col-5 {
+  //   flex-basis: 50%;
+  // }
 
-  .grid-col-6, .grid-col-7,
-  .grid-col-8, .grid-col-9,
-  .grid-col-10, .grid-col-11 {
-    flex-basis: 100%;
-  }
-}
+  // .grid-col-6, .grid-col-7,
+  // .grid-col-8, .grid-col-9,
+  // .grid-col-10, .grid-col-11 {
+  //   flex-basis: 100%;
+  // }
+// }
 
 
 // Navigation: Logo, Links, & Social
@@ -182,3 +187,14 @@ ul {
     color: red; 
   }
 }
+
+.site-content {
+  height: 100%;
+}
+
+#map {
+  height: 500px;
+}
+
+// Google Map
+.gm-style-cc { display:none; }
