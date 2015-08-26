@@ -15,6 +15,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // Connect Controllers
 var vendorsController = require("./controllers/vendors.js");
 
+// Connect search engine
+var search = require("./db/search.js")
+
 // Connecting to public assets.
 app.use(sassMiddleware({
   src: __dirname  + '/public/sass/',
@@ -42,6 +45,12 @@ app.get("/", function(req, res){
   res.render("index", {message: "Handlebars is the best."})
   res.send("Browser time!");
 });
+
+app.get("/search", function(req, res){
+    console.log(req.query.q)
+    res.send("get!!!")
+    search.marketSearch(req.query.q)
+})
 
 // Index route for markets.
 app.get("/markets", function(req,res){

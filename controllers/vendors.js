@@ -28,11 +28,6 @@ router.post("/vendors", function(req, res){
   });
 });
 
-router.post("/vendors/", function(req,res){
-    console.log("search result")
-    res.show("res.show: search result")
-})
-
 // Find vendor by ID
 router.get("/vendors/:id", function(req, res){
     // var vendor = Vendor.findById(req.params.id)
