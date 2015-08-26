@@ -10,7 +10,7 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use("/public", express.static(path.join(__dirname + "/public")));
+app.use("/public", express.static(path.join(__dirname + "/public")));
 app.use(express.static('public'));
 // app.use(express.static('files'));
 // app.use('/static', express.static('public'));
