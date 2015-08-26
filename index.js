@@ -1,9 +1,7 @@
 // Require express to application.
-// Connect Sass to application.
 // Connect express to application.
 // Connect path middleware.
 var express = require("express");
-var sassMiddleware = require("node-sass-middleware");
 var app = express();
 var path = require("path");
 
@@ -12,16 +10,10 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Connecting to public assets.
-app.use(sassMiddleware({
-  src: __dirname  + '/public/sass/',
-  dest: path.join(__dirname, '/public/css/'),
-  debug: true,
-  outputStyle: 'compressed',
-  prefix: '/prefix'
-}));
-
-app.use("/public", express.static(path.join(__dirname + "/public")));
+// app.use("/public", express.static(path.join(__dirname + "/public")));
+app.use(express.static('public'));
+// app.use(express.static('files'));
+// app.use('/static', express.static('public'));
 
 // Set up the HBS.
 app.set("view engine", "hbs");
