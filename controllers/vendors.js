@@ -8,8 +8,11 @@ function error(response, message){
 }
 // All vendors
 router.get("/vendors", function(req, res){
+  // console.log(res)
+  // console.log("session", req.session)
+  console.dir("user", req.user)
   Vendor.findAll().then(function(vendors){
-      res.render("vendors/index", {vendors: vendors});
+      res.render("vendors/index", {vendors: vendors, user: req.user});
   });
 });
 
