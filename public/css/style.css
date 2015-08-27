@@ -13,11 +13,10 @@ body {
   height: 100%; }
 
 a {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 700;
   text-decoration: none; }
-
-img {
-  height: 100%;
-  width: 100%; }
 
 ul {
   list-style: none; }
@@ -40,7 +39,6 @@ ul {
 
 .grid-col {
   background-clip: content-box;
-  border: 1px solid black;
   flex: 1 1 8%; }
 
 .grid-col-1 {
@@ -91,7 +89,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  line-height: 3em;
+  line-height: 4.5em;
   overflow: hidden; }
   .nav-list li {
     flex: 0 1 auto;
@@ -110,8 +108,53 @@ ul {
   .nav-list a:active {
     color: red; }
 
+.site-search input[type="text"] {
+  border-radius: none; }
+.site-search input[type="text"]:focus {
+  outline: none; }
+
 .site-markets {
-  max-width: 48.333em; }
+  max-width: 48.333em;
+  overflow: scroll; }
+
+.market-item {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: 1.5em; }
+  .market-item div:nth-child(1) {
+    background-color: red; }
+  .market-item div:nth-child(2) {
+    background-color: orange;
+    flex: 2 1 auto; }
+  .market-item div:nth-child(3) {
+    background-color: green;
+    flex: 1 1 auto;
+    max-width: 140px; }
+  .market-item ul {
+    background-color: red;
+    margin: 0.833em; }
+  .market-item li > h2 {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.167em;
+    font-weight: 700; }
+  .market-item h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 1em;
+    font-weight: 400; }
+
+.market-photo > div {
+  border-radius: 0.250em;
+  height: 7.583em;
+  margin-bottom: 1.417em;
+  margin-left: 1.667em;
+  margin-right: 0.833em;
+  margin-top: 1.417em;
+  overflow: hidden;
+  width: 8.333em; }
+.market-photo img {
+  height: 100%; }
 
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],

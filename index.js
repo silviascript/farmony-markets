@@ -5,6 +5,21 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
+// Module to connect to the database specified in your DATABASE_URL.
+var pg = require('pg');
+
+app.get('/db', function (request, response) {
+  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM test_table', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); response.send("Error " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); }
+    });
+  });
+})
+
 // Connect bodyparser middleware.
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -38,7 +53,7 @@ app.use("/", marketsController);
 
 // Connect to the browser.
 app.get("/", function(req, res){
-  res.redirect("markets/")
+  res.redirect("markets")
 });
 
 

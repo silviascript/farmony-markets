@@ -8,26 +8,25 @@
 
 
 // Base Font Format
-// font-family: 'Noto Sans', sans-serif;
-// font-family: 'Noto Serif', serif;
-
-
-$base-font-size: 1em;
-$base-font-print-header: 1em;
-$base-font-print-text: 1em;
+$base-font-primary: "Noto Sans", sans-serif;
+$base-font-secondary: "Noto Serif", serif;;
+$base-font-header: 1.167em;
+$base-font-body: 1em;
+$base-font-nav: 1em;
 $base-font-line-height: 1.5em;
 
-
 // Base Font Weights
+$regular: 400;
+$bold: 700;
 
 
 // Base Styling Treatments
-$grid-margin: 1em;
-$grid-padding: 1em;
-$margin-small: 1em;
-$padding-small: 1em;
-$padding-medium: 2em;
-$padding-large: 3em;
+// $grid-margin: 1em;
+$margin-small: 0.833em; //10px
+$margin-large: 1.667em; // 20px
+$padding-small: 0.833em; // 10px
+$padding-large: 1.667em; // 20px
+// $padding-large: 3em;
 
 
 // Base Format
@@ -49,12 +48,10 @@ body {
 }
 
 a {
+  font-family: $base-font-primary;
+  font-size: $base-font-nav;
+  font-weight: $bold;
   text-decoration: none;
-}
-
-img {
-  height: 100%;
-  width: 100%;
 }
 
 ul {
@@ -92,7 +89,7 @@ ul {
 .grid-col {
   background-clip: content-box;
   // background-color: red;
-  border: 1px solid black; // Remove later.
+  // border: 1px solid black; // Remove later.
   flex: 1 1 8%;
   // margin-bottom: $grid-margin;
   // padding: $padding-small;
@@ -164,7 +161,7 @@ ul {
 // }
 
 
-// Navigation: Logo, Links, & Social
+// Navigation
 .site-header {
   position: fixed;
   top: 0;
@@ -175,7 +172,7 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  line-height: 3em;
+  line-height: 4.5em;
   overflow: hidden;
 
   li {
@@ -207,12 +204,82 @@ ul {
   }
 }
 
+// Search Engine
+.site-search {
+  input[type="text"] {
+    border-radius: none;
+  }
 
-// Markets and & Google Maps
-.site-markets {
-  max-width: 48.333em;
+  input[type="text"]:focus {
+    outline: none;
+  }
 }
 
+// Market List
+.site-markets {
+  max-width: 48.333em;
+  overflow: scroll;
+}
+
+.market-item {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  line-height: $base-font-line-height;
+
+  div:nth-child(1) {
+    background-color: red;
+  }
+
+  div:nth-child(2) {
+    background-color: orange;
+    flex: 2 1 auto;
+  }
+
+  div:nth-child(3) {
+    background-color: green;
+    flex: 1 1 auto;
+    max-width: 140px;
+  }
+
+  ul {
+    background-color: red;
+    margin: $padding-small;
+  }
+
+  li > h2 {
+    font-family: $base-font-primary;
+    font-size: $base-font-header;
+    font-weight: $bold; 
+  }
+
+  h2 {
+    font-family: $base-font-secondary;
+    font-size: $base-font-body;
+    font-weight: $regular;
+  }
+}
+
+.market-photo {
+  > div {
+    border-radius: 0.250em;
+    height: 7.583em;
+    margin-bottom: 1.417em;
+    margin-left: $margin-large;
+    margin-right: $margin-small;
+    margin-top: 1.417em;
+    overflow: hidden;
+    width: 8.333em;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+
+// Google Maps
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
 .gmnoprint a,
