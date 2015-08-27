@@ -113,8 +113,8 @@ ul {
 .site-markets {
   max-width: 48.333em; }
 
-a [href^="http://maps.google.com/maps"],
-a [href^="https://maps.google.com/maps"],
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
 .gmnoprint a,
 .gmnoprint span,
 .gm-style-cc {
