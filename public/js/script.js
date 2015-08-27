@@ -47,7 +47,7 @@ $(document).ready(function($){
   $(".site-markets").bind("mousewheel DOMMouseScroll", function (e){
     var e0 = e.originalEvent,
       delta = e0.wheelDelta || -e0.detail;
-    
+
     this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
     e.preventDefault();
   });
@@ -59,8 +59,8 @@ $(document).ready(function($){
   var mapZoom = 13;
 
   // Create the marker.
-  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
+  var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+  var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
 
   // Set all the styles.
   var styles = [
@@ -346,7 +346,7 @@ $(document).ready(function($){
 
   // Set all the map options.
   var mapOptions = {
-    center: new google.maps.LatLng(latitude, longitude), 
+    center: new google.maps.LatLng(latitude, longitude),
     panControl: false,
     mapTypeControl: false,
     streetViewControl: false,
@@ -363,7 +363,7 @@ $(document).ready(function($){
 
   // Add a Marker as a placeholder.
   var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(latitude, longitude),
+    position: new google.maps.LatLng(market.latitude, market.longitude),
     map: mapArea,
     icon: markerUrl
   });
