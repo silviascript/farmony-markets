@@ -8,8 +8,9 @@ html {
   padding: 0; }
 
 body {
-  background: peachpuff;
-  font-size: 12px; }
+  background-color: peachpuff;
+  font-size: 12px;
+  height: 100%; }
 
 a {
   text-decoration: none; }
@@ -21,9 +22,15 @@ img {
 ul {
   list-style: none; }
 
-#site-container {
-/*  display: none;
-*/  height: 100%; }
+#site-container,
+.site-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%; }
+
+.site-content {
+  margin-top: 8em; }
 
 .grid-row {
   display: flex;
@@ -103,13 +110,17 @@ ul {
   .nav-list a:active {
     color: red; }
 
-.site-content {
-  height: 100%; }
+.site-markets {
+  max-width: 48.333em; }
 
-#map {
-  height: 500px; }
-
+a [href^="http://maps.google.com/maps"],
+a [href^="https://maps.google.com/maps"],
+.gmnoprint a,
+.gmnoprint span,
 .gm-style-cc {
-  display: none; }
+  display: none !important; }
+
+.gmnoprint div {
+  background: none !important; }
 
 /*# sourceMappingURL=style.css.map */

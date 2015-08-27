@@ -213,12 +213,14 @@ ul {
   max-width: 48.333em;
 }
 
-.gmnoprint a, 
-.gmnoprint span, 
+a [href^="http://maps.google.com/maps"],
+a [href^="https://maps.google.com/maps"],
+.gmnoprint a,
+.gmnoprint span,
 .gm-style-cc {
-  display:none;
+  display: none !important;
 }
 
 .gmnoprint div {
-  background:none !important;
+    background:none !important;
 }
