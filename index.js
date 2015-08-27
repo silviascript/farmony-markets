@@ -38,7 +38,7 @@ app.use("/", marketsController);
 
 // Connect to the browser.
 app.get("/", function(req, res){
-  res.redirect("markets/")
+  res.redirect("markets")
 });
 
 
