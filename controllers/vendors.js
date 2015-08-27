@@ -23,7 +23,7 @@ router.get("/vendors/new", function(req, res){
 router.post("/vendors", function(req, res){
   console.log("search1")
   Vendor.create(req.body).then(function(vendor){
-    console.log("search2")
+      console.log("search2")
     res.redirect("/vendors/" + vendor.id);
   });
 });
