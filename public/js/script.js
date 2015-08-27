@@ -34,22 +34,6 @@
 //     })
 //   });
 // });
-  // var latitude = 51.5255069;
-  // var  longitude = -0.0836207;
-  // var  map_zoom = 14;
-
-  // var map_options = {
-
-    
-  //   center: new google.maps.LatLng(latitude, longitude),
-  //   zoom: map_zoom,
-  //   panControl: false,
-  //   zoomControl: false,
-  //   mapTypeControl: false,
-  //   streetViewControl: false,
-  //   scrollwheel: false,
-  // }
-
 
 $( document ).ready(function($){
   console.log("Google Map is ready to load.");
@@ -65,7 +49,12 @@ $( document ).ready(function($){
   // Set all the map options.
   var mapOptions = {
     center: new google.maps.LatLng(latitude, longitude), 
-    zoom: mapZoom
+    panControl: false,
+    mapTypeControl: false,
+    streetViewControl: false,
+    scrollwheel: false,
+    zoom: mapZoom,
+    zoomControl: false
   }
 
   // Get the HTML DOM element that will contain the map.
