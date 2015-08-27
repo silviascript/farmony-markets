@@ -1,18 +1,41 @@
-<h2>Markets</h2>
-
-<ul>
+<div class="site-markets grid-col grid-col-7">
   {{#each markets}}
-  <li>
-    <a href="/markets/{{id}}">
-      {{name}}
-      {{addressZip}}
-    </a>
-  </li>
+    <div class="market-item">
+      <div class="market-photo">
+        <div>
+          <img src="{{photoUrl}}">
+        </div>
+      </div>
+
+      <div>
+        <ul>
+          <li><h2>{{name}}<h2></li>
+          <li>{{addressStreet}}, {{addressCity}}, {{addressZip}}</li>
+          {{!-- <li><a href="{{websiteUrl}}">{{websiteUrl}}</a></li>--}}
+          <li>{{phone}}</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li class="icon-time">{{timeOpen}} – {{timeClose}}</li>
+          <li class="icon-calendar">{{dayOpem}}</li>
+          <li class="icon-credit"></li>
+          <li class="icon-cash"></li>
+        </ul>
+      </div>
+    </div>
   {{/each}}
-</ul>
+</div>
+
+{{!-- Google Maps Area --}}
+<div class="site-map grid-col grid-col-5" id="map-area">
+  {{!-- <button id="cd-zoom-in"></button> --}}
+  {{!-- <button id="cd-zoom-out"></button> --}}
+</div>
+
 <script>
     $(document).ready(function() {
-
         // Farmers Market API
         var farmersMarketApi = {
                 sayHello: function() {
