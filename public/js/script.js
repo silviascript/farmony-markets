@@ -45,6 +45,162 @@ $( document ).ready(function($){
   var mapZoom = 11;
 
   // Set all the styles.
+  var styles = [
+    {
+      "featureType": "administrative",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "on" },
+        { "saturation": -100 },
+        { "lightness": 20 }
+      ]
+    },
+
+    {
+      "featureType": "landscape.man_made",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "simplified" },
+        { "saturation": -60 },
+        { "lightness": 10 }
+      ]
+    },
+
+    {
+      "featureType": "landscape.natural",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "on"},
+        { "saturation": -60 },
+        { "lightness": 60 },
+        { "color": "#e9e7e4" }
+      ]
+    },
+
+    {
+      "featureType": "poi",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "off" },
+        { "saturation": -100 },
+        { "lightness": 60 }
+      ]
+    },
+
+    {
+      "featureType": "poi",
+      "elementType": "labels.text",
+      "stylers": [
+        { "color": "#802728" },
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "off" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "geometry",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#d5e09d" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "labels",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.text",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#6f9543" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#6f9543" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        { "visibility": "off" },
+        { "color": "#ff0000" }
+      ]
+    },
+
+    {
+      "featureType": "poi.park",
+      "elementType": "labels.icon",
+      "stylers": [
+        { "visibility": "simplified" }
+      ]
+    },
+
+    {
+      "featureType": "road",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "on" },
+        { "saturation": -100 },
+        { "lightness": 40 }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry",
+      "stylers": [
+        { "weight": "1.00" }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry.fill",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#ffffff" },
+        { "weight": "2.21" }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        { "invert_lightness": true },
+        { "visibility": "off" }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "labels",
+      "stylers": [
+        { "visibility": "off" }
+      ]
+    },
+  ]
 
   // Set all the map options.
   var mapOptions = {
