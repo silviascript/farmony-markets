@@ -56,7 +56,6 @@ app.get("/", function(req, res){
   res.redirect("markets")
 });
 
-// name: {$iLike: '%' + userMarketSearch + '%'}
 app.get("/search", function(req, res) {
     var userMarketSearch = req.query.q
 
@@ -64,13 +63,10 @@ app.get("/search", function(req, res) {
         where: {
             $or: [{
                 name: {
-                    // $like: 'Adams Morgan Farmers Market'
                     $iLike: '%' + userMarketSearch + '%'
                 }
             }, {
                 products: {
-                    // $like: 'Adams Morgan Farmers Market'
-                    // $contains: ['Eggs']
                     $iLike: '%' + userMarketSearch + '%'
                 }
             }]
