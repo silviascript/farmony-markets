@@ -15,6 +15,12 @@ app.use(bodyParser.urlencoded({
 // Connect Controllers
 var vendorsController = require("./controllers/vendors.js");
 
+// Connect search engine
+var search = require("./db/search.js")
+
+// Connect Controllers
+var vendorsController = require("./controllers/vendors.js");
+
 // Connect search engine.
 var search = require("./db/search.js")
 
