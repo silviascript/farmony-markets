@@ -44,7 +44,7 @@ app.get("/search", function(req, res) {
         // search.marketSearch(req.query.q)
     Market.findAll({
         where: {
-            name: userMarketSearch
+            name: {$iLike: '%' + userMarketSearch + '%'}
         }
     }).then(function(searchResults) {
         console.log(searchResults)
