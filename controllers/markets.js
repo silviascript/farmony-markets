@@ -18,8 +18,18 @@ router.get("/markets", function(req,res){
 router.get("/markets/:id", function(req,res){
   Market.findById(req.params.id).then(function(market){
     if(!market) return error(res, "not found");
-      res.render("markets/show", {market: market})
-  });
-});
+    market.getVendors().then(function(vendors){
+      res.render("markets/show", {market: market, vendors: vendors})
+    });
+  })
+})
+// router.get("/markets/:id/vendors", function(req, res){
+//   Market.findById(req.params.id).then(function(market){
+//     if(!market) return error(res, "not found");
+//     market.getVendors().then(function(vendors){
+//       res.render("markets/show", {vendors: vendors});
+//     });
+//   });
+// });
 
 module.exports = router;

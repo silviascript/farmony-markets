@@ -1,1 +1,14 @@
-{{markets}}
+<h1>{{market.name}}</h1>
+<p>{{market.products}}</p>
+<p>{{market.dayOpen}}</p>
+
+<ul>
+  {{#each vendors}}
+  <li>
+    <a href="/vendors/{{id}}">
+      {{name}}
+      {{addressZip}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
