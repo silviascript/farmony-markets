@@ -22,6 +22,8 @@ module.exports = function(sequelize, DataTypes){
     addressStreet: DataTypes.STRING,
     addressZip: DataTypes.STRING,
     googleLink: DataTypes.STRING,
+    latitude: DataTypes.FLOAT,
+    longitude: DataTypes.FLOAT,
 
     // Market Hours
     dayOpen: DataTypes.STRING,
