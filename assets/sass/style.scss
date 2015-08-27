@@ -21,13 +21,12 @@ $bold: 700;
 
 
 // Base Styling Treatments
-$grid-margin: 1em;
-$grid-padding-small: 0.833em; // 10px
-$grid-padding-large: 1.667em; // 20px
-$margin-small: 1em;
-$padding-small: 1em;
-$padding-medium: 2em;
-$padding-large: 3em;
+// $grid-margin: 1em;
+$margin-small: 0.833em; //10px
+$margin-large: 1.667em; // 20px
+$padding-small: 0.833em; // 10px
+$padding-large: 1.667em; // 20px
+// $padding-large: 3em;
 
 
 // Base Format
@@ -53,11 +52,6 @@ a {
   font-size: $base-font-nav;
   font-weight: $bold;
   text-decoration: none;
-}
-
-img {
-  height: 100%;
-  width: 100%;
 }
 
 ul {
@@ -236,13 +230,6 @@ ul {
 
   div:nth-child(1) {
     background-color: red;
-
-    // img {
-    //   padding-top:
-    //   padding-right:
-    //   padding-bottom:
-    //   padding-left:
-    // }
   }
 
   div:nth-child(2) {
@@ -257,7 +244,7 @@ ul {
 
   ul {
     background-color: red;
-    margin: $grid-padding-small;
+    margin: $padding-small;
   }
 
   li > h2 {
@@ -270,6 +257,23 @@ ul {
     font-family: $base-font-secondary;
     font-size: $base-font-body;
     font-weight: $regular;
+  }
+}
+
+.market-photo {
+  > div {
+    border-radius: 0.250em;
+    height: 7.583em;
+    margin-bottom: 1.417em;
+    margin-left: $margin-large;
+    margin-right: $margin-small;
+    margin-top: 1.417em;
+    overflow: hidden;
+    width: 8.333em;
+  }
+
+  img {
+    height: 100%;
   }
 }
 
