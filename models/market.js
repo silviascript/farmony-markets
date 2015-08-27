@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes){
 
     // Detailed Information
     photoUrl: DataTypes.STRING,
-    products: DataTypes.ARRAY(DataTypes.STRING),
+    products: DataTypes.TEXT,
     vendorsNumber: DataTypes.INTEGER,
 
     // Location Information

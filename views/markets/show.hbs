@@ -1,5 +1,3 @@
-{{markets}}
-{{message}}
 <h2>{{market.name}}</h2>
 <p>{{market.addressStreet}}</p>
 <p>{{market.addressState}}</p>
@@ -19,4 +17,13 @@
 <p>{{market.vendorsNumber}}</p>
 <p>{{market.websiteUrl}}</p>
 
-<p>{{vendor.name}}</p>
+<ul>
+  {{#each vendors}}
+  <li>
+    <a href="/vendors/{{id}}">
+      {{name}}
+      {{addressZip}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
