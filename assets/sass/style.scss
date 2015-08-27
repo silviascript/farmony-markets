@@ -10,7 +10,7 @@
 // Base Font Format
 $base-font-primary: "Noto Sans", sans-serif;
 $base-font-secondary: "Noto Serif", serif;;
-$base-font-header: 1em;
+$base-font-header: 1.167em;
 $base-font-body: 1em;
 $base-font-nav: 1em;
 $base-font-line-height: 1.5em;
@@ -22,7 +22,8 @@ $bold: 700;
 
 // Base Styling Treatments
 $grid-margin: 1em;
-$grid-padding: 0.833em; // 10px
+$grid-padding-small: 0.833em; // 10px
+$grid-padding-large: 1.667em; // 20px
 $margin-small: 1em;
 $padding-small: 1em;
 $padding-medium: 2em;
@@ -49,6 +50,7 @@ body {
 
 a {
   font-family: $base-font-primary;
+  font-size: $base-font-nav;
   font-weight: $bold;
   text-decoration: none;
 }
@@ -93,7 +95,7 @@ ul {
 .grid-col {
   background-clip: content-box;
   // background-color: red;
-  border: 1px solid black; // Remove later.
+  // border: 1px solid black; // Remove later.
   flex: 1 1 8%;
   // margin-bottom: $grid-margin;
   // padding: $padding-small;
@@ -226,12 +228,21 @@ ul {
 }
 
 .market-item {
+  border-top: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  line-height: $base-font-line-height;
 
   div:nth-child(1) {
     background-color: red;
+
+    // img {
+    //   padding-top:
+    //   padding-right:
+    //   padding-bottom:
+    //   padding-left:
+    // }
   }
 
   div:nth-child(2) {
@@ -246,12 +257,20 @@ ul {
 
   ul {
     background-color: red;
-    margin: $grid-padding;
+    margin: $grid-padding-small;
   }
 
-  // li {
-  //   font
-  // }
+  li > h2 {
+    font-family: $base-font-primary;
+    font-size: $base-font-header;
+    font-weight: $bold; 
+  }
+
+  h2 {
+    font-family: $base-font-secondary;
+    font-size: $base-font-body;
+    font-weight: $regular;
+  }
 }
 
 
