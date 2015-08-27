@@ -220,18 +220,17 @@ ul {
 
   div:nth-child(2) {
     background-color: orange;
-    flex: 2 1 auto;
+    flex: 1 1 0;
   }
 
   div:nth-child(3) {
     background-color: green;
-    flex: 1 1 auto;
-    max-width: 140px;
+    width: 13.333em;
   }
 
   ul {
     background-color: red;
-    margin: $padding-small;
+    // margin: $padding-small;
   }
 
   li > h2 {

@@ -114,7 +114,6 @@ ul {
   outline: none; }
 
 .site-markets {
-  max-width: 48.333em;
   overflow: scroll; }
 
 .market-item {
@@ -127,14 +126,12 @@ ul {
     background-color: red; }
   .market-item div:nth-child(2) {
     background-color: orange;
-    flex: 2 1 auto; }
+    flex: 1 1 0; }
   .market-item div:nth-child(3) {
     background-color: green;
-    flex: 1 1 auto;
-    max-width: 140px; }
+    width: 13.333em; }
   .market-item ul {
-    background-color: red;
-    margin: 0.833em; }
+    background-color: red; }
   .market-item li > h2 {
     font-family: "Noto Sans", sans-serif;
     font-size: 1.167em;
@@ -165,5 +162,33 @@ a[href^="https://maps.google.com/maps"],
 
 .gmnoprint div {
   background: none !important; }
+
+.site-footer p {
+  line-height: 3em; }
+
+@media all and (min-width: 320px) {
+  .site-markets {
+    max-width: none; }
+    .site-markets div:last-child {
+      padding-bottom: 96px; }
+
+  .site-map {
+    display: none; }
+
+  .site-footer {
+    display: none; } }
+@media all and (min-width: 768px) {
+  .site-markets {
+    max-width: 48.333em; }
+    .site-markets div:last-child {
+      padding-bottom: 0; }
+
+  .site-footer {
+    bottom: 0;
+    display: block;
+    position: fixed; }
+
+  .site-map {
+    display: block; } }
 
 /*# sourceMappingURL=style.css.map */
