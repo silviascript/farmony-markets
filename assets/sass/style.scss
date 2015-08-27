@@ -43,8 +43,9 @@ html {
 }
 
 body {
-  background: peachpuff;
+  background-color: peachpuff;
   font-size: 12px;
+  height: 100%;
 }
 
 a {
@@ -62,9 +63,20 @@ ul {
 
 
 // Site Container
-#site-container {
-  display: none;
+#site-container, 
+.site-content {
+  align-items: stretch;
+  display: flex;
+  flex-flow: column nowrap;
   height: 100%;
+}
+
+// #site-container {
+//   // display: none; //
+// }
+
+.site-content {
+  margin-top: 8em;
 }
 
 
@@ -196,13 +208,17 @@ ul {
 }
 
 
-.site-content {
-  height: 100%;
+// Markets and & Google Maps
+.site-markets {
+  max-width: 48.333em;
 }
 
-#map {
-  height: 500px;
+.gmnoprint a, 
+.gmnoprint span, 
+.gm-style-cc {
+  display:none;
 }
 
-// Google Map
-.gm-style-cc { display:none; }
+.gmnoprint div {
+  background:none !important;
+}
