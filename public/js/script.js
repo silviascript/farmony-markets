@@ -67,4 +67,15 @@ $( document ).ready(function($){
     center: new google.maps.LatLng(latitude, longitude), 
     zoom: mapZoom
   }
+
+  // Get the HTML DOM element that will contain the map.
+  // Create the Google Map using the elements and options above.
+  var mapElement = document.getElementById("map-area");
+  var mapArea = new google.maps.Map(mapElement, mapOptions);
+
+  // Add a Marker as a placeholder.
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(latitude, longitude),
+    map: mapArea
+  });
 });
