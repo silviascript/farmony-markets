@@ -22,8 +22,8 @@ $bold: 700;
 
 // Base Styling Treatments
 // $grid-margin: 1em;
-$margin-small: 0.833em; //10px
-$margin-large: 1.667em; // 20px
+$margin-small: 0.833em;  // 10px
+$margin-large: 1.667em;  // 20px
 $padding-small: 0.833em; // 10px
 $padding-large: 1.667em; // 20px
 // $padding-large: 3em;
@@ -146,20 +146,6 @@ ul {
   flex-basis: 100%;
 }
 
-// @media all and (min-width: 568px) { // Change to em or a variable with an em.
-  // .grid-col-1, .grid-col-2,
-  // .grid-col-3, .grid-col-4,
-  // .grid-col-5 {
-  //   flex-basis: 50%;
-  // }
-
-  // .grid-col-6, .grid-col-7,
-  // .grid-col-8, .grid-col-9,
-  // .grid-col-10, .grid-col-11 {
-  //   flex-basis: 100%;
-  // }
-// }
-
 
 // Navigation
 .site-header {
@@ -204,6 +190,7 @@ ul {
   }
 }
 
+
 // Search Engine
 .site-search {
   input[type="text"] {
@@ -217,7 +204,6 @@ ul {
 
 // Market List
 .site-markets {
-  max-width: 48.333em;
   overflow: scroll;
 }
 
@@ -289,5 +275,53 @@ a[href^="https://maps.google.com/maps"],
 }
 
 .gmnoprint div {
-    background:none !important;
+  background:none !important;
+}
+
+
+// Footer
+.site-footer {
+  p {
+    line-height: 3em;
+  }
+}
+
+
+// // Media Queries
+@media all and (min-width: 320px) {
+  .site-markets {
+    max-width: none;
+
+    div:last-child {
+      padding-bottom: 96px;
+    }
+  }
+
+  .site-map { 
+    display: none;
+  }
+
+  .site-footer { 
+    display: none; 
+  }
+}
+
+@media all and (min-width: 768px) {
+  .site-markets { 
+    max-width: 48.333em;
+
+    div:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .site-footer { 
+    bottom: 0;
+    display: block;
+    position: fixed;
+  }
+
+  .site-map {
+    display: block;
+  }
 }
