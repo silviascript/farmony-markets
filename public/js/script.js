@@ -200,6 +200,129 @@ $( document ).ready(function($){
         { "visibility": "off" }
       ]
     },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text",
+      "stylers": [
+        { "color": "#a7a9ac" },
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "road.highway",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#fffefe" }
+      ]
+    },
+
+    {
+      "featureType": "road.local",
+      "elementType": "geometry",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "road.local",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#d9d7d6" }
+      ]
+    },
+
+    {
+      "featureType": "transit",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "off" },
+        { "saturation": -100 },
+        { "lightness": 60 }
+      ]
+    },
+
+
+    {
+      "featureType": "water",
+      "elementType": "all",
+      "stylers": [
+        { "visibility": "on" },
+        { "saturation": -10 },
+        { "lightness": 30 }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "geometry.fill",
+      "stylers": [
+      { "color": "#7db3ba" },
+      { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "geometry.stroke",
+      "stylers": [
+        { "weight": "8.21" },
+        { "visibility": "off" }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "labels.text",
+      "stylers": [
+        { "visibility": "simplified" },
+        { "color": "#f4f3f3" }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "labels.text.fill",
+      "stylers": [
+        { "lightness": "73" },
+        { "saturation": "0" },
+        { "gamma": "1" },
+        { "color": "#cdf2f7" },
+        { "visibility": "on" }
+      ]
+    },
+
+    {
+      "featureType": "water",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+        { "visibility": "on" },
+        { "color": "#7db3ba" },
+        { "weight": "3.49" },
+        { "lightness": "0" },
+        { "gamma": "1" }
+      ]
+    }
   ]
 
   // Set all the map options.
