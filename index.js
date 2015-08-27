@@ -55,10 +55,10 @@ app.get("/search", function(req, res){
     // search.marketSearch(req.query.q)
     Market.findAll({ where: {name: userMarketSearch}}).then(function(searchResults){
         console.log(searchResults)
-        // res.render("vendors/index", {vendors: searchResults})
+        res.render("markets/search", {markets: searchResults})
     })
 
-    res.send("search complete")
+    // res.send("search complete")
 })
 
 // Index route for markets.
