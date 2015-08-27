@@ -8,7 +8,15 @@ var path = require("path");
 // Connect bodyparser middleware.
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+// Connect Controllers
+var vendorsController = require("./controllers/vendors.js");
+
+// Connect search engine
+var search = require("./db/search.js")
 
 app.use("/public", express.static(path.join(__dirname + "/public")));
 app.use(express.static('public'));
