@@ -42,11 +42,11 @@ $( document ).ready(function($){
   // Set the starting zoom level.
   var latitude = 38.9047;
   var longitude = -77.0164;
-  var mapZoom = 11;
+  var mapZoom = 13;
 
   // Create the marker.
-  var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
+  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
 
   // Set all the styles.
   var styles = [
@@ -336,7 +336,7 @@ $( document ).ready(function($){
     panControl: false,
     mapTypeControl: false,
     streetViewControl: false,
-    scrollwheel: false,
+    scrollwheel: true,
     styles: styles,
     zoom: mapZoom,
     zoomControl: false
