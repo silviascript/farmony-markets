@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({
 
 // Connect Controllers
 var vendorsController = require("./controllers/vendors.js");
+var marketsController = require("./controllers/markets.js");
+
 
 // Connect search engine
 var search = require("./db/search.js")
@@ -28,14 +30,15 @@ app.set("view engine", "hbs");
 var Vendor = require("./db/connection").models.Vendor;
 var Market = require("./db/connection").models.Market;
 
-app.use("/", vendorsController)
+app.use("/", vendorsController);
+app.use("/", marketsController);
+
 // Connect to the Farmers Market API.
 // var apiRouter = require("./public/js/market_api.js")
 
 // Connect to the browser.
 app.get("/", function(req, res){
-  res.render("index", {message: "Handlebars is the best."})
-  // res.send("Browser time!");
+  res.redirect("markets/")
 });
 
 
@@ -44,7 +47,7 @@ app.get("/search", function(req, res) {
         // search.marketSearch(req.query.q)
     Market.findAll({
         where: {
-            name: userMarketSearch
+            name: {$iLike: '%' + userMarketSearch + '%'}
         }
     }).then(function(searchResults) {
         console.log(searchResults)
@@ -66,21 +69,6 @@ app.get("/search", function(req, res) {
 
     // res.send("search complete")
 })
-
-// Index route for markets.
-app.get("/markets", function(req,res){
-  // console.log(apiRouter.sayHello())
-  // Market.findAll().then(function(markets){
-    // var results = apiRouter.marketResults(20001)
-    res.render("markets/index", {markets: markets})
-  // })
-});
-
-// Show route for markets.
-app.get("/markets/:id", function(req,res){
-  res.render("markets/show", {message: "Info for farmer's market " + req.params.id + "."})
-});
-
 
 // Create route for about.
 app.get('/about', function(req, res){

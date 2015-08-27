@@ -1,5 +1,15 @@
-{{message}}
+<h2>Markets</h2>
 
+<ul>
+  {{#each markets}}
+  <li>
+    <a href="/markets/{{id}}">
+      {{name}}
+      {{addressZip}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
 <script>
     $(document).ready(function() {
 
