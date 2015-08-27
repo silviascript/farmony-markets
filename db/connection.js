@@ -19,11 +19,11 @@ if (process.env.DATABASE_URL){
 // Create vendors model.
 var Market = databaseConnection.import("../models/market");
 var Vendor = databaseConnection.import("../models/vendor");
-// var Booth = databaseConnection.import("../models/booth");
+var Booth = databaseConnection.import("../models/booth");
 
 // Many to many relationship between Vendors and Markets.
-Vendor.belongsToMany(Market, {through: 'booth'});
-Market.belongsToMany(Vendor, {through: 'booth'});
+Vendor.belongsToMany(Market, {through: Booth});
+Market.belongsToMany(Vendor, {through: Booth});
 
 // Add module exports for sequelize and models.
 module.exports = {
@@ -32,6 +32,6 @@ module.exports = {
   models: {
     Vendor: Vendor,
     Market: Market,
-    // Booth: Booth
+    Booth: Booth
   }
 }
