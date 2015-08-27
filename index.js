@@ -44,10 +44,12 @@ app.get("/", function(req, res){
 
 app.get("/search", function(req, res) {
     var userMarketSearch = req.query.q
-        // search.marketSearch(req.query.q)
+
     Market.findAll({
         where: {
             name: {$iLike: '%' + userMarketSearch + '%'}
+        }, $and: {
+            products: {$iLike: '%' + userMarketSearch + '%'}
         }
     }).then(function(searchResults) {
         console.log(searchResults)
@@ -67,7 +69,6 @@ app.get("/search", function(req, res) {
             })
     })
 
-    // res.send("search complete")
 })
 
 // Create route for about.
