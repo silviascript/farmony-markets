@@ -1,1 +1,29 @@
-{{markets}}
+<h2>{{market.name}}</h2>
+<p>{{market.addressStreet}}</p>
+<p>{{market.addressState}}</p>
+<p>{{market.addressCity}}</p>
+<p>{{market.addressState}}</p>
+<p>{{market.products}}</p>
+<p>{{market.dayOpen}}</p>
+<p>{{market.timeOpen}}</p>
+<p>{{market.timeClose}}</p>
+<p>{{market.monthsOpen}}</p>
+<p>{{market.googleLink}}</p>
+<p>{{market.email}}</p>
+<p>{{market.phone}}</p>
+<p>{{market.photoUrl}}</p>
+<p>{{market.facebookUrl}}</p>
+<p>{{market.twitterUrl}}</p>
+<p>{{market.vendorsNumber}}</p>
+<p>{{market.websiteUrl}}</p>
+
+<ul>
+  {{#each vendors}}
+  <li>
+    <a href="/vendors/{{id}}">
+      {{name}}
+      {{addressZip}}
+    </a>
+  </li>
+  {{/each}}
+</ul>

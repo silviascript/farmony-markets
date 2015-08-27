@@ -5,6 +5,21 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
+// Module to connect to the database specified in your DATABASE_URL.
+var pg = require('pg');
+
+app.get('/db', function (request, response) {
+  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM test_table', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); response.send("Error " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); }
+    });
+  });
+})
+
 // Connect bodyparser middleware.
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -37,10 +52,9 @@ app.use("/", marketsController);
 // var apiRouter = require("./public/js/market_api.js")
 
 // Connect to the browser.
-app.get("/", function(req, res) {
-    res.redirect("markets/")
+app.get("/", function(req, res){
+  res.redirect("markets")
 });
-
 
 // name: {$iLike: '%' + userMarketSearch + '%'}
 app.get("/search", function(req, res) {
@@ -102,6 +116,12 @@ app.get('/contact', function(req, res) {
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
 
+<<<<<<< HEAD
 app.listen(app.get("port"), function() {
     console.log("Listening on port 3000.");
 });
+=======
+app.listen(app.get("port"), function(){
+ console.log("Listening on port 3000.");
+});
+>>>>>>> ec80fccb2be9398e7560fcd80cf83d666edb7b48
