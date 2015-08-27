@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Farmony</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
+  <title>Farmony</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div id="site-container">
@@ -24,13 +24,13 @@
         </ul>
       </nav>
 
-      {{!-- Search Engine --}}
-      <div class="grid-col grid-col-12">
-        <form action="/" method="post" >
-          <label for="search">Name:</label><input name="search">
-          <label for="location">Location:</label><input name="location">
-          <input type="submit" value="Search">
+      {{!-- Search Engine [THIS NEEDS TO BE EDITED]--}}
+       <div id="tfheader">
+        <form id="tfnewsearch" method="get" action="/search">
+          <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
+          <input type="submit" value="search" class="tfbutton">
         </form>
+        <div class="tfclear"></div>
       </div>
     </header>
     

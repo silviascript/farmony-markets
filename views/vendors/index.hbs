@@ -1,1 +1,13 @@
-{{message}}
+<h2>Vendors<a href="/vendors/new">(+)</a></h2>
+
+<ul>
+  {{#each vendors}}
+  <li>
+    <a href="/vendors/{{id}}">
+      {{name}}
+      {{product}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
+

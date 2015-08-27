@@ -3,25 +3,25 @@ var router = express.Router();
 var Vendor = require("../db/connection").models.Vendor;
 
 function error(response, message){
-    response.status(500);
-    response.json({error: message})
+  response.status(500);
+  response.json({error: message})
 }
 
 // All vendors.
 router.get("/vendors", function(req, res){
   Vendor.findAll().then(function(vendors){
-      res.render("vendors/index", {vendors: vendors});
+    res.render("vendors/index", {vendors: vendors});
   });
 });
 
 // New vendor form.
 router.get("/vendors/new", function(req, res){
-    res.render("vendors/new")
+  res.render("vendors/new")
 })
 
 // Create vendors.
 router.post("/vendors", function(req, res){
-    console.log("search1")
+  console.log("search1")
   Vendor.create(req.body).then(function(vendor){
       console.log("search2")
     res.redirect("/vendors/" + vendor.id);
@@ -30,7 +30,7 @@ router.post("/vendors", function(req, res){
 
 // Find vendor by ID.
 router.get("/vendors/:id", function(req, res){
-    // var vendor = Vendor.findById(req.params.id)
+  // var vendor = Vendor.findById(req.params.id)
   Vendor.findById(req.params.id).then(function(vendor){
     if(!vendor) return error(res, "not found");
       res.render("vendors/show", {vendor: vendor})
