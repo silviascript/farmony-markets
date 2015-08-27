@@ -130,7 +130,8 @@ ul {
     flex: 2 1 auto; }
   .market-item div:nth-child(3) {
     background-color: green;
-    flex: 1 1 auto; }
+    flex: 1 1 auto;
+    max-width: 140px; }
   .market-item ul {
     background-color: red;
     margin: 0.833em; }

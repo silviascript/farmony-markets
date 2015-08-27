@@ -5,6 +5,21 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
+// Module to connect to the database specified in your DATABASE_URL.
+var pg = require('pg');
+
+app.get('/db', function (request, response) {
+  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM test_table', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); response.send("Error " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); }
+    });
+  });
+})
+
 // Connect bodyparser middleware.
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
@@ -38,19 +53,29 @@ app.use("/", marketsController);
 
 // Connect to the browser.
 app.get("/", function(req, res){
-  res.redirect("markets/")
+  res.redirect("markets")
 });
 
-
+// name: {$iLike: '%' + userMarketSearch + '%'}
 app.get("/search", function(req, res) {
     var userMarketSearch = req.query.q
 
     Market.findAll({
         where: {
-            name: {$iLike: '%' + userMarketSearch + '%'}
-        }, $and: {
-            products: {$iLike: '%' + userMarketSearch + '%'}
+            $or: [{
+                name: {
+                    // $like: 'Adams Morgan Farmers Market'
+                    $iLike: '%' + userMarketSearch + '%'
+                }
+            }, {
+                products: {
+                    // $like: 'Adams Morgan Farmers Market'
+                    // $contains: ['Eggs']
+                    $iLike: '%' + userMarketSearch + '%'
+                }
+            }]
         }
+
     }).then(function(searchResults) {
         console.log(searchResults)
         if (searchResults == false) {
@@ -72,22 +97,22 @@ app.get("/search", function(req, res) {
 })
 
 // Create route for about.
-app.get('/about', function(req, res){
-  res.render('about', {
-    title: 'About'
-  });
+app.get('/about', function(req, res) {
+    res.render('about', {
+        title: 'About'
+    });
 });
 
 // Create route for contact.
-app.get('/contact', function(req, res){
-  res.render('contact', {
-    title: 'Contact'
-  });
+app.get('/contact', function(req, res) {
+    res.render('contact', {
+        title: 'Contact'
+    });
 });
 
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
 
-app.listen(app.get("port"), function(){
- console.log("Listening on port 3000.");
+app.listen(app.get("port"), function() {
+    console.log("Listening on port 3000.");
 });
