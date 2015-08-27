@@ -69,7 +69,7 @@ ul {
 }
 
 // #site-container {
-//   // display: none; //
+//   display: none;
 // }
 
 .site-content {
@@ -208,24 +208,25 @@ ul {
 }
 
 .market-item {
-  border-top: 1px solid black;
+  border-bottom: 1px solid #000;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   line-height: $base-font-line-height;
 
   div:nth-child(1) {
-    background-color: red;
+    background-color: pink;
   }
 
   div:nth-child(2) {
     background-color: orange;
     flex: 1 1 0;
+    padding: $padding-small;
   }
 
   div:nth-child(3) {
     background-color: green;
-    width: 13.333em;
+    padding: $padding-small $padding-large $padding-small $padding-small;
   }
 
   ul {
@@ -243,23 +244,6 @@ ul {
     font-family: $base-font-secondary;
     font-size: $base-font-body;
     font-weight: $regular;
-  }
-}
-
-.market-photo {
-  > div {
-    border-radius: 0.250em;
-    height: 7.583em;
-    margin-bottom: 1.417em;
-    margin-left: $margin-large;
-    margin-right: $margin-small;
-    margin-top: 1.417em;
-    overflow: hidden;
-    width: 8.333em;
-  }
-
-  img {
-    height: 100%;
   }
 }
 
@@ -286,13 +270,23 @@ a[href^="https://maps.google.com/maps"],
 }
 
 
-// // Media Queries
+// Media Queries
 @media all and (min-width: 320px) {
   .site-markets {
     max-width: none;
 
     div:last-child {
-      padding-bottom: 96px;
+      padding-bottom: 8em;
+    }
+  }
+
+  .market-item {
+    div:nth-child(1) {
+      display: none;
+    }
+
+    div:nth-child(3) {
+      width: 10.333em;
     }
   }
 
@@ -308,10 +302,34 @@ a[href^="https://maps.google.com/maps"],
 @media all and (min-width: 768px) {
   .site-markets { 
     max-width: 48.333em;
+  }
 
-    div:last-child {
-      padding-bottom: 0;
+  .market-item {
+    div:nth-child(1) {
+      display: block;
     }
+
+    div:nth-child(3) {
+      padding-bottom: 0;
+      width: 13.333em;
+    }
+  }
+
+  .market-photo {
+    > div {
+      border-radius: 0.250em;
+      height: 7.583em;    
+      margin-bottom: 1.417em;
+      margin-left: $margin-large;
+      margin-right: $margin-small;
+      margin-top: 1.417em;
+      overflow: hidden;
+      width: 8.333em;
+    }
+
+    // img {
+    //   height: 100%;
+    // }
   }
 
   .site-footer { 

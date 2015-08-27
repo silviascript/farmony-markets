@@ -117,19 +117,20 @@ ul {
   overflow: scroll; }
 
 .market-item {
-  border-top: 1px solid black;
+  border-bottom: 1px solid #000;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   line-height: 1.5em; }
   .market-item div:nth-child(1) {
-    background-color: red; }
+    background-color: pink; }
   .market-item div:nth-child(2) {
     background-color: orange;
-    flex: 1 1 0; }
+    flex: 1 1 0;
+    padding: 0.833em; }
   .market-item div:nth-child(3) {
     background-color: green;
-    width: 13.333em; }
+    padding: 0.833em 1.667em 0.833em 0.833em; }
   .market-item ul {
     background-color: red; }
   .market-item li > h2 {
@@ -140,18 +141,6 @@ ul {
     font-family: "Noto Serif", serif;
     font-size: 1em;
     font-weight: 400; }
-
-.market-photo > div {
-  border-radius: 0.250em;
-  height: 7.583em;
-  margin-bottom: 1.417em;
-  margin-left: 1.667em;
-  margin-right: 0.833em;
-  margin-top: 1.417em;
-  overflow: hidden;
-  width: 8.333em; }
-.market-photo img {
-  height: 100%; }
 
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
@@ -170,7 +159,12 @@ a[href^="https://maps.google.com/maps"],
   .site-markets {
     max-width: none; }
     .site-markets div:last-child {
-      padding-bottom: 96px; }
+      padding-bottom: 8em; }
+
+  .market-item div:nth-child(1) {
+    display: none; }
+  .market-item div:nth-child(3) {
+    width: 10.333em; }
 
   .site-map {
     display: none; }
@@ -180,8 +174,22 @@ a[href^="https://maps.google.com/maps"],
 @media all and (min-width: 768px) {
   .site-markets {
     max-width: 48.333em; }
-    .site-markets div:last-child {
-      padding-bottom: 0; }
+
+  .market-item div:nth-child(1) {
+    display: block; }
+  .market-item div:nth-child(3) {
+    padding-bottom: 0;
+    width: 13.333em; }
+
+  .market-photo > div {
+    border-radius: 0.250em;
+    height: 7.583em;
+    margin-bottom: 1.417em;
+    margin-left: 1.667em;
+    margin-right: 0.833em;
+    margin-top: 1.417em;
+    overflow: hidden;
+    width: 8.333em; }
 
   .site-footer {
     bottom: 0;
