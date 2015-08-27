@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Farmony</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -10,7 +11,6 @@
 </head>
 <body>
   <div id="site-container">
-    <!-- Header & Navigation -->
     <header class="site-header grid-row">
       <nav class="grid-col grid-col-12">
         <ul class="nav-list">
@@ -24,26 +24,31 @@
         </ul>
       </nav>
 
+      {{!-- Search Engine --}}
       <div class="grid-col grid-col-12">
-        <p>Some text.</p>
+        <form action="/" method="post" >
+          <label for="search">Name:</label><input name="search">
+          <label for="location">Location:</label><input name="location">
+          <input type="submit" value="Search">
+        </form>
       </div>
     </header>
     
-    <!-- Main Content -->
+    {{!-- Main Content --}}
     <main class="site-content grid-row">
       {{{body}}}
     </main>
     
-    <!-- Footer -->
     <footer class="grid-row">
       <div class="grid-col grid-col-12">
         <p>Footer text.</p>
       </div>
     </footer>
-  </div> <!-- Closes "#site-container" -->  
+  </div>
 
-  <!-- JavaScript -->
+  {{!-- JavaScript Files --}}
   <script src="/public/js/jquery.js"></script>
   <script src="/public/js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={AIzaSyB8Y6lvtaERFmo2NDyxTk-wdq4qLVrXxSU}"></script>
 </body>
 </html>
