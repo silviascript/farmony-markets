@@ -46,6 +46,9 @@ app.get("/", function(req, res){
   res.send("Browser time!");
 });
 
+var Vendor = require("./db/connection").models.Vendor;
+var Market = require("./db/connection").models.Market;
+
 app.get("/search", function(req, res){
     console.log(req.query.q)
     search.marketSearch(req.query.q)
