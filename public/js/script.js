@@ -44,6 +44,10 @@ $( document ).ready(function($){
   var longitude = -77.0164;
   var mapZoom = 11;
 
+  // Create the marker.
+  var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+  var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
+
   // Set all the styles.
   var styles = [
     {
@@ -193,7 +197,7 @@ $( document ).ready(function($){
       ]
     },
 
-    {
+    { // Do not show highway labels on the map.
       "featureType": "road.highway",
       "elementType": "labels",
       "stylers": [
@@ -254,7 +258,6 @@ $( document ).ready(function($){
       ]
     },
 
-
     {
       "featureType": "water",
       "elementType": "all",
@@ -277,8 +280,8 @@ $( document ).ready(function($){
       "featureType": "water",
       "elementType": "geometry.fill",
       "stylers": [
-      { "color": "#7db3ba" },
-      { "visibility": "on" }
+        { "color": "#7db3ba" },
+        { "visibility": "on" }
       ]
     },
 
@@ -325,6 +328,8 @@ $( document ).ready(function($){
     }
   ]
 
+  console.log("Styles are ready to load.")
+
   // Set all the map options.
   var mapOptions = {
     center: new google.maps.LatLng(latitude, longitude), 
@@ -332,6 +337,7 @@ $( document ).ready(function($){
     mapTypeControl: false,
     streetViewControl: false,
     scrollwheel: false,
+    styles: styles,
     zoom: mapZoom,
     zoomControl: false
   }
@@ -344,6 +350,7 @@ $( document ).ready(function($){
   // Add a Marker as a placeholder.
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(latitude, longitude),
-    map: mapArea
+    map: mapArea,
+    icon: markerUrl
   });
 });
