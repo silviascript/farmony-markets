@@ -37,18 +37,33 @@ app.use("/", marketsController);
 // var apiRouter = require("./public/js/market_api.js")
 
 // Connect to the browser.
-app.get("/", function(req, res){
-  res.redirect("markets/")
+app.get("/", function(req, res) {
+    res.redirect("markets/")
 });
 
 
+// name: {$iLike: '%' + userMarketSearch + '%'}
 app.get("/search", function(req, res) {
     var userMarketSearch = req.query.q
         // search.marketSearch(req.query.q)
     Market.findAll({
         where: {
-            name: {$iLike: '%' + userMarketSearch + '%'}
+
+            $or: [{
+                name: {
+                    $like: 'Adams Morgan Farmers Market'
+                    // $iLike: '%' + userMarketSearch + '%'
+                }
+            }, {
+                // products: {
+                addressZip: {
+                    $like: 'Adams Morgan Farmers Market'
+                    // $contains: ['Eggs']
+                    // $iLike: '%' + userMarketSearch + '%'
+                }
+            }]
         }
+
     }).then(function(searchResults) {
         console.log(searchResults)
         if (searchResults == false) {
@@ -71,22 +86,22 @@ app.get("/search", function(req, res) {
 })
 
 // Create route for about.
-app.get('/about', function(req, res){
-  res.render('about', {
-    title: 'About'
-  });
+app.get('/about', function(req, res) {
+    res.render('about', {
+        title: 'About'
+    });
 });
 
 // Create route for contact.
-app.get('/contact', function(req, res){
-  res.render('contact', {
-    title: 'Contact'
-  });
+app.get('/contact', function(req, res) {
+    res.render('contact', {
+        title: 'Contact'
+    });
 });
 
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
 
-app.listen(app.get("port"), function(){
- console.log("Listening on port 3000.");
+app.listen(app.get("port"), function() {
+    console.log("Listening on port 3000.");
 });
