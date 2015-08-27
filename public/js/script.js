@@ -39,18 +39,6 @@ $(document).ready(function($){
   console.log("Google Map is ready to load.");
 
   // Disables scrolling on site.
-  $("#site-container").bind("mousewheel", function() {
-     return false;
-  });
-
-  // Prevent double scrolling using Chrome and Firefox scrolls.
-  $(".site-markets").bind("mousewheel DOMMouseScroll", function (e){
-    var e0 = e.originalEvent,
-      delta = e0.wheelDelta || -e0.detail;
-
-    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-    e.preventDefault();
-
   $("html, body").css({
     "overflow": "hidden",
     "height": "100%"
@@ -66,7 +54,7 @@ $(document).ready(function($){
 
   // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
   // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
-  var markerUrl = "../public/img/cd-icon-location.png";
+  var markerUrl = "img/cd-icon-location.png";
 
   // Set all the styles.
   var styles = [
@@ -373,5 +361,4 @@ $(document).ready(function($){
     map: mapArea,
     icon: markerUrl
   });
-});
 });
