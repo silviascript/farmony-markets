@@ -65,15 +65,14 @@ app.get("/search", function(req, res) {
 
             $or: [{
                 name: {
-                    $like: 'Adams Morgan Farmers Market'
-                    // $iLike: '%' + userMarketSearch + '%'
+                    // $like: 'Adams Morgan Farmers Market'
+                    $iLike: '%' + userMarketSearch + '%'
                 }
             }, {
-                // products: {
-                addressZip: {
-                    $like: 'Adams Morgan Farmers Market'
+                products: {
+                    // $like: 'Adams Morgan Farmers Market'
                     // $contains: ['Eggs']
-                    // $iLike: '%' + userMarketSearch + '%'
+                    $iLike: '%' + userMarketSearch + '%'
                 }
             }]
         }
@@ -116,12 +115,6 @@ app.get('/contact', function(req, res) {
 // Port listener.
 app.set("port", (process.env.PORT || 3000));
 
-<<<<<<< HEAD
 app.listen(app.get("port"), function() {
     console.log("Listening on port 3000.");
 });
-=======
-app.listen(app.get("port"), function(){
- console.log("Listening on port 3000.");
-});
->>>>>>> ec80fccb2be9398e7560fcd80cf83d666edb7b48
