@@ -39,7 +39,6 @@ $(document).ready(function($){
   console.log("Google Map is ready to load.");
 
   // Disables scrolling on site.
-<<<<<<< HEAD
   $("#site-container").bind("mousewheel", function() {
      return false;
   });
@@ -51,11 +50,10 @@ $(document).ready(function($){
 
     this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
     e.preventDefault();
-=======
+
   $("html, body").css({
     "overflow": "hidden",
     "height": "100%"
->>>>>>> origin/master
   });
 
   // Set the latitude and longitude to center the map.
@@ -65,12 +63,10 @@ $(document).ready(function($){
   var mapZoom = 13;
 
   // Create the marker.
-<<<<<<< HEAD
-  var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
-=======
-  var markerUrl = "img/cd-icon-location.png";
->>>>>>> origin/master
+
+  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
+  var markerUrl = "../public/img/cd-icon-location.png";
 
   // Set all the styles.
   var styles = [
@@ -373,8 +369,9 @@ $(document).ready(function($){
 
   // Add a Marker as a placeholder.
   var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(market.latitude, market.longitude),
+    position: new google.maps.LatLng(latitude, longitude),
     map: mapArea,
     icon: markerUrl
   });
+});
 });
