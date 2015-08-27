@@ -47,6 +47,7 @@ app.get("/markets", function(req,res){
 // Show route for markets.
 app.get("/markets/:id", function(req,res){
   res.render("markets/show", {message: "Info for farmer's market " + req.params.id + "."})
+<<<<<<< HEAD
 });
 
 // Index route for vendors.
@@ -56,6 +57,17 @@ app.get("/vendors", function(req,res){
   // })
 });
 
+=======
+});
+
+// Index route for vendors.
+app.get("/vendors", function(req,res){
+  // Vendor.findAll().then(function(vendors){
+    res.render("vendors/index", {message: "List of vendors."})
+  // })
+});
+
+>>>>>>> parent of 2e28743... Edited indentation.
 // New route for vendors.
 app.get("/vendors/new", function(req,res){
   res.render("vendors/new", {message: "Form for new vendor."})
