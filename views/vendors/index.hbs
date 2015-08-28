@@ -1,13 +1,48 @@
+<div class="site-markets grid-col grid-col-7">
+
 <h2>Vendors<a href="/vendors/new">(+)</a></h2>
 
 <ul>
   {{#each vendors}}
   <li>
+    <div>
+      <ul>
     <a href="/vendors/{{id}}">
-      {{name}}
+
+    <h2>{{name}}</a></h2></li>
+        <li>{{addressStreet}}, {{addressCity}}, {{addressState}} {{addressZip}}</li>
+        <li><a href="{{websiteUrl}}">{{websiteName}}</a></li>
+        <li>{{phone}}</li>
+      </ul>
       {{product}}
-    </a>
-  </li>
+
   {{/each}}
 </ul>
 
+<div class="site-markets grid-col grid-col-7">
+  {{#each markets}}
+    <div class="market-item">
+      <div class="market-photo">
+        <div class="background-image" style="background-image:url('{{photoUrl}}');"></div>
+      </div>
+
+      <div>
+        <ul>
+          <li><h2><a href="markets/{{id}}">{{name}}</a><h2></li>
+          <li>{{addressStreet}}, {{addressCity}}, {{addressZip}}</li>
+           <li><a href="{{websiteUrl}}">{{websiteName}}</a></li>
+          <li>{{phone}}</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li class="icon-time">{{timeOpen}} – {{timeClose}}</li>
+          <li class="icon-calendar">{{dayOpem}}</li>
+          <li class="icon-credit"></li>
+          <li class="icon-cash"></li>
+        </ul>
+      </div>
+    </div>
+  {{/each}}
+</div>
