@@ -1,10 +1,10 @@
 // Base Brand
-// $bc-primary:;
-// $bc-secondary:;
-// $bc-tertiary:;
-// $fc-primary:;
-// $fc-secondary:;
-// $fc-tertiary:;
+$bc-primary: #00BA9D;
+$bc-secondary: #75C98E;
+$bc-tertiary: #FFFFFF;
+$fc-primary: #3CC196;
+$fc-secondary: #00BA9D;
+$fc-tertiary: #333333;
 
 
 // Base Font Format
@@ -42,15 +42,12 @@ html {
 }
 
 body {
-  background-color: peachpuff;
+  background-color: #FFFFFF;
   font-size: 12px;
   height: 100%;
 }
 
 a {
-  font-family: $base-font-primary;
-  font-size: $base-font-nav;
-  font-weight: $bold;
   text-decoration: none;
 }
 
@@ -73,7 +70,7 @@ ul {
 // }
 
 .site-content {
-  margin-top: 8em;
+  margin-top: 11.250em;
 }
 
 
@@ -82,26 +79,19 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  // margin-top: $grid-margin;
   width: 100%;
 }
 
 .grid-col {
   background-clip: content-box;
-  // background-color: red;
-  // border: 1px solid black; // Remove later.
   flex: 1 1 8%;
-  // margin-bottom: $grid-margin;
-  // padding: $padding-small;
 }
 
 .grid-col-1 {
-  background-color: red;
   flex-basis: 8.3333%;
 }
 
 .grid-col-2 {
-  background-color: green;
   flex-basis: 16.6666%; 
 }
 
@@ -142,16 +132,24 @@ ul {
 }
 
 .grid-col-12 {
-  background-color: orange;
   flex-basis: 100%;
 }
 
 
 // Navigation
 .site-header {
+  border-bottom: 1px solid #69B580;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.20);
   position: fixed;
   top: 0;
   z-index: 2;
+}
+
+.site-nav {
+  background-color: $bc-primary;
+  font-family: $base-font-primary;
+  font-size: $base-font-nav;
+  font-weight: $bold;
 }
 
 .nav-list {
@@ -173,7 +171,10 @@ ul {
   }
 
   a:link {
-    color: yellow; 
+    color: $bc-tertiary;
+    font-size: $base-font-nav;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
   }
 
   a:focus {
@@ -193,22 +194,53 @@ ul {
 
 // Search Engine
 .site-search {
+  background-color: $bc-secondary;
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 20px;
+  }
+
+  input {
+    margin: 20px 10px 20px 0;
+  }
+
   input[type="text"] {
-    border-radius: none;
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: none;
+    display: block;
+    line-height: 40px;
   }
 
   input[type="text"]:focus {
     outline: none;
   }
+
+  input[type="submit"] {
+    border: none;
+    border-radius: 3px;
+    line-height: 40px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: red;
+    transition: 300ms; 
+  }
 }
+
 
 // Market List
 .site-markets {
+  border-right: 1px solid #69B580;
   overflow: scroll;
 }
 
 .market-item {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #CFECD8;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -221,11 +253,10 @@ ul {
   div:nth-child(2) {
     background-color: blue;
     flex: 1 1 0;
-    padding: $padding-small;
+    padding-top: 33px;
   }
 
   div:nth-child(3) {
-    background-color: green;
     padding: $padding-small $padding-large $padding-small $padding-small;
   }
 
@@ -250,7 +281,7 @@ ul {
 .market-photo {
   > div {
     border-radius: 0.250em;
-    height: 7.583em;
+    height: 7.25em;
     margin-bottom: 1.417em;
     margin-left: $margin-large;
     margin-right: $margin-small;
@@ -285,6 +316,9 @@ a[href^="https://maps.google.com/maps"],
 
 // Footer
 .site-footer {
+  background-color: $bc-secondary;
+  box-shadow: 10px 1px 0px 0px rgba(0, 0, 0, 0.20);
+
   p {
     line-height: 3em;
   }
