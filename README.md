@@ -72,4 +72,8 @@ $ npm install
 - Laura Nawrocki: https://github.com/LauraWN
 
 ##Credits
-To be added.
+- All photographs belong to their respective owners.
+- Google Maps API: https://developers.google.com/maps/?hl=en
+- Weather Underground API: http://www.wunderground.com/weather/api
+- Noto Sans Font by Google Fonts.
+- Noto Serif Font by Google Fonts.
