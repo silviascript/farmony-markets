@@ -21,7 +21,15 @@ A web application to view local farmers markets and the vendors at each one.
 - When peer programming include initials in commit message
 
 ##Major Hurdles
-To be added.
+- Displaying Google map pins from information from the database
+- Installing Sass into the app
+- Making the search engine search through multiple attributes of a class
+
+** To Do
+- Complete styling of show pages
+- Intergrate map into the market and vendor show pages
+- Add weather feature that displays the current local weather
+- Add twitter authentication branch to master branch. Twitter auth currently works.
 
 ##Installation Instructions
 The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
