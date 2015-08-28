@@ -163,11 +163,19 @@ ul {
     flex: 0 1 auto;
     padding: 0 1em 0 1em;
     text-align: center;
-  }  
+  } 
+
+  .site-words {
+    color: $bc-tertiary;
+    font-family: $base-font-secondary;
+    font-size: 10px;
+    font-weight: $regular;
+  }
   
   li:nth-child(1) {
     flex: 8 0 auto;
-    text-align: left;  
+    padding-left: $padding-large;
+    text-align: left;
   }
 
   a:link {
@@ -206,8 +214,6 @@ ul {
   // a:visited {
   //   color: #FFF;
   // }
-
-
 }
 
 

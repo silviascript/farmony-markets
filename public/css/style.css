@@ -97,8 +97,14 @@ ul {
     flex: 0 1 auto;
     padding: 0 1em 0 1em;
     text-align: center; }
+  .nav-list .site-words {
+    color: #FFFFFF;
+    font-family: "Noto Serif", serif;
+    font-size: 10px;
+    font-weight: 400; }
   .nav-list li:nth-child(1) {
     flex: 8 0 auto;
+    padding-left: 1.667em;
     text-align: left; }
   .nav-list a:link {
     color: #FFFFFF;
