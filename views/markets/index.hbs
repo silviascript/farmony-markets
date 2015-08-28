@@ -2,16 +2,14 @@
   {{#each markets}}
     <div class="market-item">
       <div class="market-photo">
-        <div>
-          <img src="{{photoUrl}}">
-        </div>
+        <div class="background-image" style="background-image:url('{{photoUrl}}');"></div>
       </div>
 
       <div>
         <ul>
-          <li><h2>{{name}}<h2></li>
+          <li><h2><a href="markets/{{id}}">{{name}}</a><h2></li>
           <li>{{addressStreet}}, {{addressCity}}, {{addressZip}}</li>
-          {{!-- <li><a href="{{websiteUrl}}">{{websiteUrl}}</a></li>--}}
+           <li><a href="{{websiteUrl}}">{{websiteName}}</a></li>
           <li>{{phone}}</li>
         </ul>
       </div>

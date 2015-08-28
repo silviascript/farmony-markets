@@ -8,7 +8,7 @@ module.exports = function(sequelize, DataTypes){
     facebookUrl: DataTypes.STRING,
     phone: DataTypes.STRING,
     twitterUrl: DataTypes.STRING,
-    // websiteName: DataTypes.STRING,
+    websiteName: DataTypes.STRING,
     websiteUrl: DataTypes.STRING,
 
     // Detailed Information
@@ -22,16 +22,18 @@ module.exports = function(sequelize, DataTypes){
     addressStreet: DataTypes.STRING,
     addressZip: DataTypes.STRING,
     googleLink: DataTypes.STRING,
+    latitude: DataTypes.FLOAT,
+    longitude: DataTypes.FLOAT,
 
     // Market Hours
     dayOpen: DataTypes.STRING,
     monthsOpen: DataTypes.ARRAY(DataTypes.STRING),
     timeOpen: DataTypes.STRING,
-    timeClose: DataTypes.STRING // Add "," later.
+    timeClose: DataTypes.STRING,
 
     // Payment Options
-    // paymentCard: DataTypes.STRING,
-    // paymentCash: DataTypes.STRING,
-    // paymentSnap: DataTypes.STRING
+    paymentCard: DataTypes.STRING,
+    paymentCash: DataTypes.STRING,
+    paymentSnap: DataTypes.STRING
   });
 }

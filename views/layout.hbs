@@ -12,7 +12,7 @@
 <body>
   <div id="site-container">
     <header class="site-header grid-row">
-      <nav class="grid-col grid-col-12">
+      <nav class="site-nav grid-col grid-col-12">
         <ul class="nav-list">
           <li><a href="/">Farmony</a></li>
           <!--<li><a href="/markets">Markets</a></li>-->
@@ -25,10 +25,11 @@
       </nav>
 
       {{!-- Search Engine [THIS NEEDS TO BE EDITED]--}}
-       <div id="tfheader">
+       <div class="site-search grid-col grid-col-12" id="tfheader">
         <form id="tfnewsearch" method="get" action="/search">
-          <input type="text" class="tftextinput" name="q" size="21" maxlength="120">
-          <input type="submit" value="search" class="tfbutton">
+          <input type="text" class="tftextinput " name="q" placeholder="Search ...">
+          <input type="text" class="tftextinput" name="q" placeholder="Washington, DC">
+          <input type="submit" value="Search" class="tfbutton">
         </form>
         <div class="tfclear"></div>
       </div>
@@ -40,7 +41,7 @@
     </main>
     
     {{!-- Footer Content --}}
-    <footer class="grid-row">
+    <footer class="site-footer grid-row">
       <div class="grid-col grid-col-12">
         <p>Footer text.</p>
       </div>

@@ -16,3 +16,14 @@
 <p>{{vendor.photoUrl}}</p>
 <p>{{vendor.facebookUrl}}</p>
 <p>{{vendor.twitterUrl}}<p>
+
+<ul>
+  {{#each markets}}
+  <li>
+    <a href="/markets/{{id}}">
+      {{name}}
+      {{addressZip}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
