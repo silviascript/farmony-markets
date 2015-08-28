@@ -53,6 +53,7 @@ $ cd to_chosen_directory
 ```console
 $ git clone https://github.com/siltastic/farmony-markets.git
 ```
+
 ######To run the application:
 - Have PostgreSQL running to connect to the server.
 - Once repository is cloned, change directory to the repository.
