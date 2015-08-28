@@ -36,25 +36,13 @@
 // });
 
 $(document).ready(function($){
-  console.log("Google Map is ready to load.");
+  // console.log("Google Map is ready to load.");
 
   // Disables scrolling on site.
   $("html, body").css({
     "overflow": "hidden",
     "height": "100%"
   });
-
-  // Set the latitude and longitude to center the map.
-  // Set the starting zoom level.
-  var latitude = 38.9047;
-  var longitude = -77.0164;
-  var mapZoom = 13;
-
-  // Create the marker.
-
-  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
-  var markerUrl = "img/icon_pin.png";
 
   // Set all the styles.
   var styles = [
@@ -336,7 +324,13 @@ $(document).ready(function($){
     }
   ]
 
-  console.log("Styles are ready to load.")
+  // console.log("Styles are ready to load.")
+
+  // Set the latitude and longitude to center the map.
+  // Set the starting zoom level.
+  var latitude = 38.9047;
+  var longitude = -77.0164;
+  var mapZoom = 13;
 
   // Set all the map options.
   var mapOptions = {
@@ -354,11 +348,21 @@ $(document).ready(function($){
   // Create the Google Map using the elements and options above.
   var mapElement = document.getElementById("map-area");
   var mapArea = new google.maps.Map(mapElement, mapOptions);
+  var markerUrl = "img/icon_pin.png";
+  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
 
-  // Add a Marker as a placeholder.
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(latitude, longitude),
-    map: mapArea,
-    icon: markerUrl
-  });
+  // Add markers using market locations
+  $.getJSON("/marketsJSON").then(function(response){
+    for (var i = 0; i < response.length; i++){
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(response[i].latitude, response[i].longitude),
+        map: mapArea,
+        icon: markerUrl,
+        title: " " + response[i].name + " "
+      });
+    }
+  }).fail(function(){
+    console.log("failed")
+  })
 });

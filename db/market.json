@@ -24,7 +24,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9226795,
-    "longitude": 77.0426674
+    "longitude": -77.0426674
   },
   {
     "api_id": 1008071,
@@ -51,7 +51,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9169984,
-    "longitude": 77.0320505
+    "longitude": -77.0320505
   },
   {
     "api_id": 1010839,
@@ -78,7 +78,7 @@
     "paymentCash": "All",
     "paymentSnap": "All",
     "latitude": 38.9411512,
-    "longitude": 77.0250472
+    "longitude": -77.0250472
   },
   {
     "api_id": 1004269,
@@ -105,7 +105,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9158,
-    "longitude": 77.0683
+    "longitude": -77.0683
   },
   {
     "api_id": 1003521,
@@ -132,7 +132,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9158,
-    "longitude": 77.0683
+    "longitude": -77.0683
   },
   {
     "api_id": 1005631,
@@ -159,7 +159,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.887743,
-    "longitude": 77.028494
+    "longitude": -77.028494
   },
   {
     "api_id": 1004356,
@@ -186,7 +186,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.908709,
-    "longitude": 77.054640
+    "longitude": -77.054640
   },
   {
     "api_id": 1006799,
@@ -213,7 +213,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.90075,
-    "longitude": 77.03487
+    "longitude": -77.03487
   },
   {
     "api_id": 1007276,
@@ -240,7 +240,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9316,
-    "longitude": 77.03871
+    "longitude": -77.03871
   },
   {
     "api_id": 1011224,
@@ -267,7 +267,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9302453,
-    "longitude": 77.0327468
+    "longitude": -77.0327468
   },
   {
     "api_id": 1006793,
@@ -294,7 +294,7 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude": 38.9302453,
-    "longitude": 77.0327468
+    "longitude": -77.0327468
   },
   {
     "api_id": 1006794,
@@ -321,6 +321,6 @@
     "paymentCash": "All",
     "paymentSnap": "",
     "latitude":  38.9007,
-    "longitude": 77.05148
+    "longitude": -77.05148
   }
 ]
