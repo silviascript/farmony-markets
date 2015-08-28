@@ -1,21 +1,24 @@
-{{message}}
+<div class="site-markets grid-col grid-col-7">
+
+<h1>{{market.name}}</h1>
+
 <h2>{{vendor.name}}</h2>
-<p>{{vendor.addressStreet}}</p>
-<p>{{vendor.addressCity}}</p>
-<p>{{vendor.addressState}}</p>
-<p>{{vendor.addressZip}}</p>
-<p>{{vendor.product}}</p>
-<p>{{vendor.email}}</p>
-<p>{{vendor.websiteUrl}}</p>
-<p>{{vendor.phone}}</p>
-<p>{{vendor.mapUrl}}</p>
-<p>{{vendor.paymentCard}}</p>
-<p>{{vendor.paymentCash}}</p>
-<p>{{vendor.paymentOther}}</p>
-<p>{{vendor.paymentSnap}}</p>
-<p>{{vendor.photoUrl}}</p>
-<p>{{vendor.facebookUrl}}</p>
-<p>{{vendor.twitterUrl}}<p>
+  <p>{{vendor.addressStreet}}</p>
+  <p>{{vendor.addressCity}},</p>
+  <p>{{vendor.addressState}}</p>
+  <p>{{vendor.addressZip}}</p>
+  <p>{{vendor.product}}</p>
+  <p>{{vendor.email}}</p>
+  <p>{{vendor.websiteUrl}}</p>
+  <p>{{vendor.phone}}</p>
+  <p>{{vendor.mapUrl}}</p>
+  <p>{{vendor.paymentCard}}</p>
+  <p>{{vendor.paymentCash}}</p>
+  <p>{{vendor.paymentOther}}</p>
+  <p>{{vendor.paymentSnap}}</p>
+  <p>{{vendor.photoUrl}}</p>
+  <p>{{vendor.facebookUrl}}</p>
+  <p>{{vendor.twitterUrl}}</p>
 
 <ul>
   {{#each markets}}
@@ -27,3 +30,8 @@
   </li>
   {{/each}}
 </ul>
+{{!-- Google Maps Area --}}
+<div class="site-map grid-col grid-col-5" id="map-area">
+  {{!-- <button id="cd-zoom-in"></button> --}}
+  {{!-- <button id="cd-zoom-out"></button> --}}
+</div>
