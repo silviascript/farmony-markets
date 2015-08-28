@@ -54,7 +54,7 @@ $(document).ready(function($){
 
   // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
   // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
-  var markerUrl = "img/cd-icon-location.png";
+  var markerUrl = "img/icon_pin.png";
 
   // Set all the styles.
   var styles = [
