@@ -348,13 +348,11 @@ $(document).ready(function($){
   // Create the Google Map using the elements and options above.
   var mapElement = document.getElementById("map-area");
   var mapArea = new google.maps.Map(mapElement, mapOptions);
-  var markerUrl = "img/icon_pin.png";
-
-  // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
+  var markerUrl = "/public/img/icon_pin.png";
 
   // Add markers using market locations
   $.getJSON("/marketsJSON").then(function(response){
+    console.log(response)
     for (var i = 0; i < response.length; i++){
       var marker = new google.maps.Marker({
         position: new google.maps.LatLng(response[i].latitude, response[i].longitude),
