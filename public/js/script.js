@@ -349,6 +349,7 @@ $(document).ready(function($){
   var mapElement = document.getElementById("map-area");
   var mapArea = new google.maps.Map(mapElement, mapOptions);
   var markerUrl = "img/icon_pin.png";
+
   // var internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
   // var markerUrl = (internetExplorer11) ? "img/cd-icon-location.png" : "img/cd-icon-location.svg";
 
