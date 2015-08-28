@@ -104,7 +104,7 @@ $(document).ready(function($){
       "elementType": "labels.text",
       "stylers": [
         { "color": "#802728" },
-        { "visibility": "on" }
+        { "visibility": "off" }
       ]
     },
 
@@ -121,7 +121,7 @@ $(document).ready(function($){
       "elementType": "geometry",
       "stylers": [
         { "visibility": "on" },
-        { "color": "#d5e09d" }
+        { "color": "#b0ce86" }
       ]
     },
 
@@ -288,7 +288,7 @@ $(document).ready(function($){
       "featureType": "water",
       "elementType": "geometry.fill",
       "stylers": [
-        { "color": "#7db3ba" },
+        { "color": "#65cdd8" },
         { "visibility": "on" }
       ]
     },
