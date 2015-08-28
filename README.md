@@ -46,7 +46,7 @@ $ cd to_chosen_directory
     $node db/seed.js
     $nodemon
   These lines of code will install the npm modules, drop the farmony db (in case you already are connected to the database), create the farmony database, migrate the table, and seed the information to the database.
-3. Open a broswer with the following as the path: localhost:3000.
+3. Open a browser with the following as the path: localhost:3000.
 
 et Voila! Farmony Markets!
 
