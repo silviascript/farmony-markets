@@ -56,8 +56,12 @@ app.get("/", function(req, res){
   res.redirect("markets")
 });
 
+
+
 app.get("/search", function(req, res) {
     var userMarketSearch = req.query.q
+    console.log("================================================================================================================")
+    console.log(req.query.q)
 
     Market.findAll({
         where: {
@@ -73,7 +77,6 @@ app.get("/search", function(req, res) {
         }
 
     }).then(function(searchResults) {
-        console.log(searchResults)
         if (searchResults == false) {
             Market.findAll({
                 where: {
@@ -91,6 +94,7 @@ app.get("/search", function(req, res) {
     })
 
 })
+
 
 // Create route for about.
 app.get('/about', function(req, res) {
@@ -112,3 +116,4 @@ app.set("port", (process.env.PORT || 3000));
 app.listen(app.get("port"), function() {
     console.log("Listening on port 3000.");
 });
+
