@@ -59,9 +59,17 @@ ul {
 // Site Container
 #site-container, 
 .site-content {
-  align-items: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   height: 100%;
 }
 
@@ -76,64 +84,100 @@ ul {
 
 // Base Grid Format
 .grid-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%;
 }
 
 .grid-col {
   background-clip: content-box;
-  flex: 1 1 8%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 8%;
+      -ms-flex: 1 1 8%;
+          flex: 1 1 8%;
 }
 
 .grid-col-1 {
-  flex-basis: 8.3333%;
+  -webkit-flex-basis: 8.3333%;
+      -ms-flex-preferred-size: 8.3333%;
+          flex-basis: 8.3333%;
 }
 
 .grid-col-2 {
-  flex-basis: 16.6666%; 
+  -webkit-flex-basis: 16.6666%;
+      -ms-flex-preferred-size: 16.6666%;
+          flex-basis: 16.6666%;
 }
 
 .grid-col-3 {
-  flex-basis: 25%;
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%;
 }
 
 .grid-col-4 {
-  flex-basis: 33.3333%;
+  -webkit-flex-basis: 33.3333%;
+      -ms-flex-preferred-size: 33.3333%;
+          flex-basis: 33.3333%;
 }
 
 .grid-col-5 {
-  flex-basis: 41.6666%;
+  -webkit-flex-basis: 41.6666%;
+      -ms-flex-preferred-size: 41.6666%;
+        flex-basis: 41.6666%;
 }
 
 .grid-col-6 {
-  flex-basis: 50%;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
 }
 
 .grid-col-7 {
-  flex-basis: 58.3333%;
+  -webkit-flex-basis: 58.3333%;
+      -ms-flex-preferred-size: 58.3333%;
+          flex-basis: 58.3333%;
 }
 
 .grid-col-8 {
-  flex-basis: 66.6666%;
+  -webkit-flex-basis: 66.6666%;
+      -ms-flex-preferred-size: 66.6666%;
+          flex-basis: 66.6666%;
 }
 
 .grid-col-9 {
-  flex-basis: 75%;
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%;
 }
 
 .grid-col-10 {
-  flex-basis: 83.3333%;
-}
+  -webkit-flex-basis: 83.3333%;
+      -ms-flex-preferred-size: 83.3333%;
+          flex-basis: 83.3333%;
+  }
 
 .grid-col-11 {
-  flex-basis: 91.6666%;
-}
+  -webkit-flex-basis: 91.6666%;
+      -ms-flex-preferred-size: 91.6666%;
+          flex-basis: 91.6666%;
+  }
 
 .grid-col-12 {
-  flex-basis: 100%;
-}
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  }
 
 
 // Navigation
@@ -153,21 +197,44 @@ ul {
 }
 
 .nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   line-height: 4.5em;
   overflow: hidden;
 
   li {
-    flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     padding: 0 1em 0 1em;
     text-align: center;
-  }  
+  } 
+
+  .site-words {
+    color: $bc-tertiary;
+    font-family: $base-font-secondary;
+    font-size: 10px;
+    font-weight: $regular;
+  }
   
   li:nth-child(1) {
-    flex: 8 0 auto;
-    text-align: left;  
+    -webkit-box-flex: 8;
+    -webkit-flex: 8 0 auto;
+        -ms-flex: 8 0 auto;
+            flex: 8 0 auto;
+    padding-left: 1.667em;
+    text-align: left;
   }
 
   a:link {
@@ -177,18 +244,35 @@ ul {
     text-transform: uppercase;
   }
 
-  a:focus {
-    color: orange; 
-  }  
-
-  a:hover {
-    color: green; 
-    transition: 300ms; 
+  a:visited {
+    color: $bc-tertiary;
   }
-
+  
+  // a:hover {
+  //   color: green;
+  //   transition: 300ms; 
+  // }
+  
   a:active {
-    color: red; 
+    color: r$bc-tertiary;
   }
+
+  // // a:focus {
+  // //   color: orange; 
+  // // }  
+
+  // a:hover {
+  //   color: green; 
+  //   
+  // }
+
+  // // a:active {
+  // //   color: red; 
+  // // }
+
+  // a:visited {
+  //   color: #FFF;
+  // }
 }
 
 
@@ -197,10 +281,18 @@ ul {
   background-color: $bc-secondary;
 
   form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 0 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
   }
 
   input {
@@ -208,7 +300,9 @@ ul {
   }
 
   input[type="text"] {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     border: none;
     border-radius: 3px;
     box-shadow: none;
@@ -228,7 +322,8 @@ ul {
 
   input[type="submit"]:hover {
     background-color: red;
-    transition: 300ms; 
+    -webkit-transition: 300ms;
+            transition: 300ms;
   }
 }
 
@@ -236,45 +331,64 @@ ul {
 // Market List
 .site-markets {
   border-right: 1px solid #69B580;
+  padding-bottom: 75px;
   overflow: scroll;
 }
 
 .market-item {
   border-bottom: 1px solid #CFECD8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  line-height: $base-font-line-height;
-
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  line-height: 15px;
   // div:nth-child(1) {
   //   background-color: pink;
   // }
 
   div:nth-child(2) {
-    flex: 1 1 0;
-    padding-top: 28px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+        -ms-flex: 1 1 0;
+            flex: 1 1 0;
   }
 
   div:nth-child(3) {
-    padding: $padding-small $padding-large $padding-small $padding-small;
-  }
-
-  ul {
-    background-color: red;
-    // margin: $padding-small;
+    margin-top: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   li > h2 {
     font-family: $base-font-primary;
     font-size: $base-font-header;
     font-weight: $bold; 
+    padding-bottom: 3px;
   }
 
-  h2 {
-    font-family: $base-font-secondary;
-    font-size: $base-font-body;
-    font-weight: $regular;
+  li a {
+    color: $bc-primary;
   }
+
+  li {
+    color: #333333;
+    font-size: $base-font-body;
+    padding-top: 3px;
+  }
+
+  // h2 {
+  //   font-family: $base-font-secondary;
+  //   font-size: $base-font-body;
+  //   font-weight: $regular;
+  // }
 }
 
 .market-photo {
@@ -298,6 +412,12 @@ ul {
   }
 }
 
+.market-details {
+  float: left;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+
 
 // Google Maps
 a[href^="http://maps.google.com/maps"],
@@ -312,14 +432,17 @@ a[href^="https://maps.google.com/maps"],
   background:none !important;
 }
 
-
 // Footer
 .site-footer {
   background-color: $bc-secondary;
   box-shadow: 10px 1px 0px 0px rgba(0, 0, 0, 0.20);
+  color: white;
 
   p {
-    line-height: 3em;
+    font-family: $base-font-primary;
+    font-size: 10px;
+    line-height: 4em;
+    padding-left: 20px;
   }
 }
 
@@ -328,9 +451,9 @@ a[href^="https://maps.google.com/maps"],
 @media all and (min-width: 320px) {
   .site-markets {
     max-width: none;
-
+  
     div:last-child {
-      padding-bottom: 7.917em;
+      padding-bottom: 100px;
     }
   }
 
@@ -341,6 +464,9 @@ a[href^="https://maps.google.com/maps"],
 
     div:nth-child(2) {
       padding-left: 20px;
+      padding-right: 10px;
+      padding-top: 26px;
+      // padding-bottom: 28px;
     }
 
     div:nth-child(3) {
@@ -390,12 +516,13 @@ a[href^="https://maps.google.com/maps"],
 
 @media all and (min-width: 768px) {
   .site-markets { 
-    max-width: 48.333em;
+    max-width: 52em;
   }
 
   .market-item {
     div:nth-child(1) {
       display: block;
+      height: auto;
     }
 
     div:nth-child(3) {
