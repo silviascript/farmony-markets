@@ -5,11 +5,16 @@ A simple web application to view local farmers markets.
 Goal: As a user, I should be able to ...
 
 ######Major Priorities
-- View all available farmers markets in the local area.
-- View all available photographs of the farmers market's vendors.
-- View all contact information (phone, website, etc.) for each vendor.
-- View all farmers markets on a map that is integrated on the website.
-- Search farmers markets in specific locations in the local area.
+- Enter vendor information.
+- View farmers markets in the local area.
+- View farmers markets on a map.
+- View photographs of the farmers market's vendors.
+- View contact information for farmers market.
+- View contact information (phone, website, etc.) for each vendor.
+- View farmers markets on a map that is integrated on the website.
+- Search farmers markets by location.
+- Search farmers markets by farmers market name.
+- Search farmers markets by vendor name.
 
 ######Medium Priorities
 - Know the distance for each type of transportation to reach a specific farmers market.
@@ -26,8 +31,6 @@ Goal: As a user, I should be able to ...
 - Sign in as an user, in order edit personal selections.
 
 ##User Experience Designs (Wireframes)
-To be added.
-
 ![Image of Farmony Sketches](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_0000_FM_2015_Planning-Sketches.jpg)
 
 ![Image of Farmony Homepage Wireframe](https://github.com/siltastic/farmony-markets/blob/master/planning/user-experience/img/20150823_0000_FM_2015_Web-1.0_Home_Introduction.jpg)
