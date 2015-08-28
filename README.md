@@ -37,19 +37,6 @@ The instructions already assume that you have all the necessary installations (G
 ```console
 $ cd to_chosen_directory
 ```
-1. Clone the repository to your hard drive from github.
-2. In terminal, run the following lines of code:
-    $npm install
-    $dropdb farmony_db
-    $createdb farmony_db
-    $node db/migrate.js
-    $node db/seed.js
-    $nodemon
-  These lines of code will install the npm modules, drop the farmony db (in case you already are connected to the database), create the farmony database, migrate the table, and seed the information to the database.
-3. Open a broswer with the following as the path: localhost:3000.
-
-et Voila! Farmony Markets!
-
 
 ######To fork:
 * In Github, select the 'Fork' button.
@@ -67,10 +54,20 @@ et Voila! Farmony Markets!
 $ git clone https://github.com/siltastic/farmony-markets.git
 ```
 ######To run the application:
-To be added.
+- Have PostgreSQL running to connect to the server.
+- Once repository is cloned, change directory to the repository.
+- In your CLI, do a npm install to fetch NPM dependencies.
+- In your CLI, create the database, migrate information, and seed data.
+- In your CLI, run the express application.
+- Open a broswer with the following as the path: localhost:3000.
 
 ```console
 $ npm install
+$ dropdb farmony_db
+$ createdb farmony_db
+$ node db/migrate.js
+$ node db/seed.js
+$ nodemon index.js
 ```
 
 ##Authors
