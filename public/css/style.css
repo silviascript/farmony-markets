@@ -105,13 +105,10 @@ ul {
     font-size: 1em;
     letter-spacing: 0.4em;
     text-transform: uppercase; }
-  .nav-list a:focus {
-    color: orange; }
-  .nav-list a:hover {
-    color: green;
-    transition: 300ms; }
+  .nav-list a:visited {
+    color: #FFFFFF; }
   .nav-list a:active {
-    color: red; }
+    color: r #FFFFFF; }
 
 .site-search {
   background-color: #75C98E; }
@@ -148,22 +145,23 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  line-height: 1.5em; }
+  line-height: 15px; }
   .market-item div:nth-child(2) {
-    flex: 1 1 0;
-    padding-top: 28px; }
+    flex: 1 1 0; }
   .market-item div:nth-child(3) {
-    padding: 0.833em 1.667em 0.833em 0.833em; }
-  .market-item ul {
-    background-color: red; }
+    padding-top: 28px;
+    padding-left: 10px;
+    padding-right: 10px; }
   .market-item li > h2 {
     font-family: "Noto Sans", sans-serif;
     font-size: 1.167em;
     font-weight: 700; }
-  .market-item h2 {
-    font-family: "Noto Serif", serif;
+  .market-item li a {
+    color: #00BA9D; }
+  .market-item li {
+    color: #333333;
     font-size: 1em;
-    font-weight: 400; }
+    padding-top: 3px; }
 
 .market-photo > div {
   border-radius: 0.250em;
@@ -181,6 +179,11 @@ ul {
   background-repeat: no-repeat;
   height: 100%; }
 
+.market-details {
+  float: left;
+  padding-top: 3px;
+  padding-right: 10px; }
+
 a[href^="http://maps.google.com/maps"],
 a[href^="https://maps.google.com/maps"],
 .gmnoprint a,
@@ -193,9 +196,13 @@ a[href^="https://maps.google.com/maps"],
 
 .site-footer {
   background-color: #75C98E;
-  box-shadow: 10px 1px 0px 0px rgba(0, 0, 0, 0.2); }
+  box-shadow: 10px 1px 0px 0px rgba(0, 0, 0, 0.2);
+  color: white; }
   .site-footer p {
-    line-height: 3em; }
+    font-family: "Noto Sans", sans-serif;
+    font-size: 10px;
+    line-height: 4em;
+    padding-left: 20px; }
 
 @media all and (min-width: 320px) {
   .site-markets {
@@ -206,7 +213,10 @@ a[href^="https://maps.google.com/maps"],
   .market-item div:nth-child(1) {
     display: none; }
   .market-item div:nth-child(2) {
-    padding-left: 20px; }
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-top: 28px;
+    padding-bottom: 28px; }
   .market-item div:nth-child(3) {
     width: 10.333em; }
 
@@ -236,10 +246,11 @@ a[href^="https://maps.google.com/maps"],
     display: none; } }
 @media all and (min-width: 768px) {
   .site-markets {
-    max-width: 48.333em; }
+    max-width: 52em; }
 
   .market-item div:nth-child(1) {
-    display: block; }
+    display: block;
+    height: auto; }
   .market-item div:nth-child(3) {
     padding-bottom: 0;
     width: 13.333em; }

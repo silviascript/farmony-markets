@@ -177,18 +177,37 @@ ul {
     text-transform: uppercase;
   }
 
-  a:focus {
-    color: orange; 
-  }  
-
-  a:hover {
-    color: green; 
-    transition: 300ms; 
+  a:visited {
+    color: $bc-tertiary;
   }
-
+  
+  // a:hover {
+  //   color: green;
+  //   transition: 300ms; 
+  // }
+  
   a:active {
-    color: red; 
+    color: r$bc-tertiary;
   }
+
+  // // a:focus {
+  // //   color: orange; 
+  // // }  
+
+  // a:hover {
+  //   color: green; 
+  //   
+  // }
+
+  // // a:active {
+  // //   color: red; 
+  // // }
+
+  // a:visited {
+  //   color: #FFF;
+  // }
+
+
 }
 
 
@@ -244,24 +263,19 @@ ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  line-height: $base-font-line-height;
-
+  line-height: 15px;
   // div:nth-child(1) {
   //   background-color: pink;
   // }
 
   div:nth-child(2) {
     flex: 1 1 0;
-    padding-top: 28px;
   }
 
   div:nth-child(3) {
-    padding: $padding-small $padding-large $padding-small $padding-small;
-  }
-
-  ul {
-    background-color: red;
-    // margin: $padding-small;
+    padding-top: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   li > h2 {
@@ -270,11 +284,21 @@ ul {
     font-weight: $bold; 
   }
 
-  h2 {
-    font-family: $base-font-secondary;
-    font-size: $base-font-body;
-    font-weight: $regular;
+  li a {
+    color: $bc-primary;
   }
+
+  li {
+    color: #333333;
+    font-size: $base-font-body;
+    padding-top: 3px;
+  }
+
+  // h2 {
+  //   font-family: $base-font-secondary;
+  //   font-size: $base-font-body;
+  //   font-weight: $regular;
+  // }
 }
 
 .market-photo {
@@ -298,6 +322,12 @@ ul {
   }
 }
 
+.market-details {
+  float: left;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+
 
 // Google Maps
 a[href^="http://maps.google.com/maps"],
@@ -317,9 +347,13 @@ a[href^="https://maps.google.com/maps"],
 .site-footer {
   background-color: $bc-secondary;
   box-shadow: 10px 1px 0px 0px rgba(0, 0, 0, 0.20);
+  color: white;
 
   p {
-    line-height: 3em;
+    font-family: $base-font-primary;
+    font-size: 10px;
+    line-height: 4em;
+    padding-left: 20px;
   }
 }
 
@@ -341,6 +375,9 @@ a[href^="https://maps.google.com/maps"],
 
     div:nth-child(2) {
       padding-left: 20px;
+      padding-right: 10px;
+      padding-top: 28px;
+      padding-bottom: 28px;
     }
 
     div:nth-child(3) {
@@ -390,12 +427,13 @@ a[href^="https://maps.google.com/maps"],
 
 @media all and (min-width: 768px) {
   .site-markets { 
-    max-width: 48.333em;
+    max-width: 52em;
   }
 
   .market-item {
     div:nth-child(1) {
       display: block;
+      height: auto;
     }
 
     div:nth-child(3) {
