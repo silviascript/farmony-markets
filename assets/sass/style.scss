@@ -246,14 +246,13 @@ ul {
   flex-wrap: nowrap;
   line-height: $base-font-line-height;
 
-  div:nth-child(1) {
-    background-color: pink;
-  }
+  // div:nth-child(1) {
+  //   background-color: pink;
+  // }
 
   div:nth-child(2) {
-    background-color: blue;
     flex: 1 1 0;
-    padding-top: 33px;
+    padding-top: 28px;
   }
 
   div:nth-child(3) {
@@ -340,6 +339,10 @@ a[href^="https://maps.google.com/maps"],
       display: none;
     }
 
+    div:nth-child(2) {
+      padding-left: 20px;
+    }
+
     div:nth-child(3) {
       width: 10.333em;
     }
@@ -362,6 +365,10 @@ a[href^="https://maps.google.com/maps"],
   .market-item {
     div:nth-child(1) {
       display: block;
+    }
+    
+    div:nth-child(2) {
+      padding-left: 10px;
     }
 
     div:nth-child(3) {
