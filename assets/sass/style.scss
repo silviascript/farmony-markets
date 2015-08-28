@@ -219,7 +219,7 @@ ul {
   }
 
   div:nth-child(2) {
-    background-color: orange;
+    background-color: blue;
     flex: 1 1 0;
     padding: $padding-small;
   }
@@ -244,6 +244,27 @@ ul {
     font-family: $base-font-secondary;
     font-size: $base-font-body;
     font-weight: $regular;
+  }
+}
+
+.market-photo {
+  > div {
+    border-radius: 0.250em;
+    height: 7.583em;
+    margin-bottom: 1.417em;
+    margin-left: $margin-large;
+    margin-right: $margin-small;
+    margin-top: 1.417em;
+    overflow: hidden;
+    width: 8.333em;
+  }
+
+  .background-image {
+    display: block;
+    background-size: auto 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 100%;
   }
 }
 
@@ -276,7 +297,7 @@ a[href^="https://maps.google.com/maps"],
     max-width: none;
 
     div:last-child {
-      padding-bottom: 8em;
+      padding-bottom: 7.917em;
     }
   }
 
@@ -299,6 +320,33 @@ a[href^="https://maps.google.com/maps"],
   }
 }
 
+@media all and (min-width: 533px) {
+  .site-markets { 
+    width: 100%;
+  }
+
+  .market-item {
+    div:nth-child(1) {
+      display: block;
+    }
+
+    div:nth-child(3) {
+      padding-bottom: 10;
+      width: 13.333em;
+    }
+  }
+
+  .site-footer { 
+    bottom: 0;
+    display: block;
+    position: fixed;
+  }
+
+  .site-map {
+    display: none;
+  }
+}
+
 @media all and (min-width: 768px) {
   .site-markets { 
     max-width: 48.333em;
@@ -313,23 +361,6 @@ a[href^="https://maps.google.com/maps"],
       padding-bottom: 0;
       width: 13.333em;
     }
-  }
-
-  .market-photo {
-    > div {
-      border-radius: 0.250em;
-      height: 7.583em;    
-      margin-bottom: 1.417em;
-      margin-left: $margin-large;
-      margin-right: $margin-small;
-      margin-top: 1.417em;
-      overflow: hidden;
-      width: 8.333em;
-    }
-
-    // img {
-    //   height: 100%;
-    // }
   }
 
   .site-footer { 
