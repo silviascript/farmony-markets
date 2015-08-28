@@ -27,9 +27,9 @@ A web application to view local farmers markets and the vendors at each one.
 
 ** To Do
 - Complete styling of show pages
-- Intergrate map into the market and vendor show pages
+- Integrate map into the market and vendor show pages
 - Add weather feature that displays the current local weather
-- Add twitter authentication branch to master branch. Twitter auth currently works.
+- Add twitter authentication branch to master branch. Twitter auth currently works, just need to add.
 
 ##Installation Instructions
 The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
