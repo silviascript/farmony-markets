@@ -1,8 +1,24 @@
 # Farmony Markets
-A simple web application to view local farmers markets.
+A web application to view local farmers markets and the vendors at each one.
 
 ##General Approach
-To be added.
+* Preparation:
+- Created Google Doc for documentation purposes
+- Listed areas of expertise and areas of improvement for each team member
+- Listed schedules for each team member
+- Created trello board
+
+* Daily scrum:
+- Recorded meetings in Google doc
+- What did each person do the day/night before?
+- What will each person work on today?
+- Questions, suggestions, improvements
+
+* Version control:
+- Pull request before pushing to master
+- Meet with group to resolve any merge conflicts
+- Comment often on new lines of code
+- When peer programming include initials in commit message
 
 ##Major Hurdles
 To be added.

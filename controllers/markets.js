@@ -14,6 +14,23 @@ router.get("/markets", function(req,res){
   })
 });
 
+// JSON route for markets
+router.get("/marketsJSON", function(req, res) {
+   Market.findAll()
+       .then(function(markets) {
+           var latLng = []
+           for (i = 0; i < markets.length; i++) {
+               latLng.push({
+                   name: markets[i].name,
+                   latitude: markets[i].latitude,
+                   longitude: markets[i].longitude
+               })
+           }
+           res.json(latLng
+           )
+       })
+});
+
 // Show route for markets.
 router.get("/markets/:id", function(req,res){
   Market.findById(req.params.id).then(function(market){
