@@ -281,6 +281,7 @@ ul {
   background-color: $bc-secondary;
 
   form {
+    padding-left: 20px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -308,16 +309,27 @@ ul {
     box-shadow: none;
     display: block;
     line-height: 40px;
+    padding-left: 10px;
+    width: 400px;
   }
+
+  // input[type="placeholder"] {
+  //   padding-left: 10px;
+  // }
 
   input[type="text"]:focus {
     outline: none;
   }
 
   input[type="submit"] {
+    background-color: $bc-primary;
     border: none;
     border-radius: 3px;
+    color: #FFF;
+    font-weight: $bold;
+    letter-spacing: 1px;
     line-height: 40px;
+    width: 193px;
   }
 
   input[type="submit"]:hover {
@@ -331,7 +343,7 @@ ul {
 // Market List
 .site-markets {
   border-right: 1px solid #69B580;
-  padding-bottom: 75px;
+  margin-bottom: 75px;
   overflow: scroll;
 }
 
