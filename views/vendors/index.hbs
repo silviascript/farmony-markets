@@ -4,18 +4,21 @@
 
 <ul>
   {{#each vendors}}
-  <li>
-    <div>
+  <div class="market-item">
+
+
       <ul>
     <a href="/vendors/{{id}}">
 
-    <h2>{{name}}</a></h2></li>
+  <li><h2>{{name}}</a></h2></li>
         <li>{{addressStreet}}, {{addressCity}}, {{addressState}} {{addressZip}}</li>
         <li><a href="{{websiteUrl}}">{{websiteName}}</a></li>
         <li>{{phone}}</li>
+        <li>{{product}}</li>
       </ul>
-      {{product}}
 
+  <div>
+  </div>
   {{/each}}
 </ul>
 
@@ -32,13 +35,14 @@
           <li>{{addressStreet}}, {{addressCity}}, {{addressZip}}</li>
            <li><a href="{{websiteUrl}}">{{websiteName}}</a></li>
           <li>{{phone}}</li>
+          <li>{{product}}</li>
         </ul>
       </div>
 
       <div>
         <ul>
           <li class="icon-time">{{timeOpen}} – {{timeClose}}</li>
-          <li class="icon-calendar">{{dayOpem}}</li>
+          <li class="icon-calendar">{{dayOpen}}</li>
           <li class="icon-credit"></li>
           <li class="icon-cash"></li>
         </ul>
