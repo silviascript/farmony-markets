@@ -4,7 +4,7 @@ A web application to view local farmers markets and their vendors.
 ##General Approach & Hurdles
 ######Preparation:
 - Created [Google Document](https://docs.google.com/document/d/1eVXVuK2S9cDVoq0kvjtOdalWFiBP5xUSwrreV8DvqoM/edit?usp=sharing) for documentation purposes.
-- Created [Trello](https://trello.com/b/GV627Wb1) board.
+- Created [Trello](https://trello.com/b/GV627Wb1) board for sharing information.
 - Listed areas of expertise and areas of improvement for each team member.
 - Listed schedules for each team member.
 
@@ -88,6 +88,7 @@ $ nodemon index.js
 - Laura Nawrocki: https://github.com/LauraWN
 
 ##Credits
+- All iconograhy designed by Silvia Brown.
 - All photographs belong to their respective owners.
 - Google Maps API: https://developers.google.com/maps/?hl=en
 - Weather Underground API: http://www.wunderground.com/weather/api
