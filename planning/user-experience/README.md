@@ -5,25 +5,25 @@ A simple web application to view local farmers markets.
 Goal: As a user, I should be able to ...
 
 ######Major Priorities
-- Enter vendor information.
-- View farmers markets in the local area.
-- View farmers markets on a map.
-- View photographs of the farmers market's vendors.
+- Enter vendor information as an admin.
 - View contact information for farmers market.
 - View contact information (phone, website, etc.) for each vendor.
+- View farmers markets in the Washington DC area.
 - View farmers markets on a map that is integrated on the website.
+- View photographs of the farmers market's vendors.
 - Search farmers markets by location.
 - Search farmers markets by farmers market name.
 - Search farmers markets by vendor name.
+- Search farmers markets by zipcode.
 
 ######Medium Priorities
-- Know the distance for each type of transportation to reach a specific farmers market.
 - Know the price range for each vendor in each farmers markets.
-- Know the weather in order to know if the farmers markets is closed or open.
 - Know which farmers markets accept cash, credit cards, and food stamps.
 - Know which farmers markets sell organic and animal friendly products.
 
 ######Minor Priorities
+- Know the distance for each type of transportation to reach a specific farmers market.
+- Know the weather in order to know if the farmers markets is closed or open.
 - Sign up as an admin (vendor), in order to edit vendor information.
 - Sign in as an admin (vendor), in order to add vendor information.
 - Sign in as an admin (vendor), in order to add recipes that relate to their products.

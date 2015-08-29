@@ -1,42 +1,48 @@
 # Farmony Markets
-A web application to view local farmers markets and the vendors at each one.
+A web application to view local farmers markets and their vendors.
 
-##General Approach
+##General Approach & Hurdles
 ######Preparation:
-- Created Google Document for documentation purposes.
+- Created [Google Document](https://docs.google.com/document/d/1eVXVuK2S9cDVoq0kvjtOdalWFiBP5xUSwrreV8DvqoM/edit?usp=sharing) for documentation purposes.
+- Created [Trello](https://trello.com/b/GV627Wb1) board.
 - Listed areas of expertise and areas of improvement for each team member.
 - Listed schedules for each team member.
-- Created trello board.
 
 ######Daily Scrum:
 - Recorded meetings in Google Document.
+- Questions, suggestions, and improvements.
 - What did each person do the day and night before?
 - What will each person work on today?
-- Questions, suggestions, and improvements.
 
 ######Version Control:
 - Comment often on new lines of code.
-- Pull request before pushing to master.
 - Meet with group to resolve any merge conflicts.
-- When peer programming, include initials in commit message. 
-  - For example, "Peer [Initial/Initial]".
+- Pull request before pushing to master.
+- When paired programming, include initials in commit message. 
+  - For example, "Peer Initial/Initial".
   - Peer S/L means Silvia and Laura paired programmed with each other.
   - Peer O/J means Omari and Jared programed with each other.
   - And so on.
 
-######Major Hurdles
+######Major Hurdles:
 - Installing Sass into the application.
 - Displaying Google Map pins from information from the database.
 - Creating the search engine search through multiple attributes of a class.
 
-######To Do
+######Technical Requirements
+- API has RESTful routes as appropriate: Markets and vendors.
+- API includes at least 2 models: Markets, vendors, and booths.
+- Application provides a reasonable user experience.
+- Models include at least one association.
+
+######To Do:
 - Complete styling of show pages.
 - Integrate map into the market and vendor show pages.
 - Add weather feature that displays the current local weather.
 - Add Twitter authentication branch to master branch. Twitter authentication currently works, just need to add it.
 
 ##Installation Instructions
-The instructions already assume that you have all the necessary installations (Git, Node, NPM, and Express). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
+The instructions already assume that you have all the necessary installations ([Git](https://git-scm.com/), [Node](https://nodejs.org/), [NPM](https://www.npmjs.com/), [PostgreSQL](http://www.postgresql.org/), and [Express](http://expressjs.com/)). Once all prerequisites have been installed, follow these instructions to run the Express application. Change to the directory to place the repository. Do not place it into a repository with git initialized.
 
 ```console
 $ cd to_chosen_directory
@@ -64,7 +70,7 @@ $ git clone https://github.com/siltastic/farmony-markets.git
 - In your CLI, do a npm install to fetch NPM dependencies.
 - In your CLI, create the database, migrate information, and seed data.
 - In your CLI, run the express application.
-- Open a broswer with the following as the path: localhost:3000.
+- Open a browser with the following as the path: localhost:3000.
 
 ```console
 $ npm install
