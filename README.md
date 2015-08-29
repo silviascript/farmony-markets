@@ -29,7 +29,7 @@ A web application to view local farmers markets and their vendors.
 - Displaying Google Map pins from information from the database.
 - Creating the search engine search through multiple attributes of a class.
 
-######Technical Requirements
+######Technical Requirements:
 - API has RESTful routes as appropriate: Markets and vendors.
 - API includes at least 2 models: Markets, vendors, and booths.
 - Application provides a reasonable user experience.
