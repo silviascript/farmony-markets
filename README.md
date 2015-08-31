@@ -21,7 +21,7 @@ A web application to view local farmers markets and their vendors.
 - When paired programming, include initials in commit message. 
   - For example, "Peer Initial/Initial".
   - Peer S/L means Silvia and Laura paired programmed with each other.
-  - Peer O/J means Omari and Jared programed with each other.
+  - Peer O/J means Omari and Jared paired programmed with each other.
   - And so on.
 
 ######Major Hurdles:
@@ -82,15 +82,15 @@ $ nodemon index.js
 ```
 
 ##Authors
-- Jared Arkin: https://github.com/arkinjb
-- Silvia Brown: https://github.com/siltastic
-- Omari Mayers-Walker: https://github.com/omarimayerswalker
-- Laura Nawrocki: https://github.com/LauraWN
+- [Jared Arkin](https://github.com/arkinjb)
+- [Silvia Brown](https://github.com/siltastic)
+- [Omari Mayers-Walker](https://github.com/omarimayerswalker)
+- [Laura Nawrocki](https://github.com/LauraWN)
 
 ##Credits
 - All iconograhy designed by Silvia Brown.
 - All photographs belong to their respective owners.
-- Google Maps API: https://developers.google.com/maps/?hl=en
-- Weather Underground API: http://www.wunderground.com/weather/api
-- Noto Sans Font by Google Fonts.
-- Noto Serif Font by Google Fonts.
+- [Noto Sans](https://www.google.com/fonts/specimen/Noto+Sans) Font by Google Fonts.
+- [Noto Serif](https://www.google.com/fonts/specimen/Noto+Serif) Font by Google Fonts.
+- [Google Maps API](https://developers.google.com/maps/?hl=en)
+- [Weather Underground API](http://www.wunderground.com/weather/api)
