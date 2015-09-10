@@ -9,27 +9,17 @@ function error(response, message){
 
 // Index route for markets.
 router.get("/markets", function(req,res){
-  Market.findAll().then(function(markets){
-    res.render("markets/index", {markets: markets})
-  })
+  if(req.accepts('json')) {
+    Market.getLatLong().then(function(results) {
+      res.json(results);
+    })
+  } else {
+    Market.findAll().then(function(markets){
+      res.render("markets/index", {markets: markets})
+    })
+  }
 });
 
-// JSON route for markets
-router.get("/marketsJSON", function(req, res) {
-   Market.findAll()
-       .then(function(markets) {
-           var latLng = []
-           for (i = 0; i < markets.length; i++) {
-               latLng.push({
-                   name: markets[i].name,
-                   latitude: markets[i].latitude,
-                   longitude: markets[i].longitude
-               })
-           }
-           res.json(latLng
-           )
-       })
-});
 
 // Show route for markets.
 router.get("/markets/:id", function(req,res){
