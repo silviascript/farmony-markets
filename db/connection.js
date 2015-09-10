@@ -25,6 +25,20 @@ var Booth = databaseConnection.import("../models/booth");
 Vendor.belongsToMany(Market, {through: Booth});
 Market.belongsToMany(Vendor, {through: Booth});
 
+Market.prototype.getLatLong = function() {
+  var latLng = []
+  return (Market.findAll()
+  .then(function(markets) {
+    for (i = 0; i < markets.length; i++) {
+      latLng.push({
+        name: markets[i].name,
+        latitude: markets[i].latitude,
+        longitude: markets[i].longitude
+      })
+    }
+  }))
+}
+
 // Add module exports for sequelize and models.
 module.exports = {
   Sequelize: Sequelize,
