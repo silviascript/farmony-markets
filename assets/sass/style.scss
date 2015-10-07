@@ -42,12 +42,67 @@ body {
   height: 100%;
 }
 
-a {
+.site-markets h2, h4, p, a {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.site-markets a {
   text-decoration: none;
+  color: #00BA9D;
+}
+
+.site-markets p #market_email {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: block;
+}
+
+.site-markets h2 {
+  color: #00BA9D;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size:2.5em;
+  text-align: center;
+}
+
+.site-markets h4 {
+  color: #75C98E;
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.site-markets p {
+  font-size: 1.5em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.site-markets #market_img {
+  display: block;
+  width: 70%;
+  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 ul {
   list-style: none;
+}
+
+#market_vendors {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+#market_vendors li {
+  line-height: 1.5;
 }
 
 

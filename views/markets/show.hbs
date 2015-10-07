@@ -1,24 +1,31 @@
 <div class="site-markets grid-col grid-col-7">
   <h2>{{market.name}}</h2>
+  <img id="market_img" src="{{market.photoUrl}}"></img>
+  <h4>Address</h4>
   <p>{{market.addressStreet}}</p>
-  <p>{{market.addressState}}</p>
-  <p>{{market.addressCity}}</p>
-  <p>{{market.addressState}}</p>
+  <!--   <p>{{market.addressState}}</p> -->
+  <!--   <p>{{market.addressCity}}</p> -->
+  <!--   <p>{{market.addressState}}</p> -->
+  <h4>Products</h4>
   <p>{{market.products}}</p>
+  <h4>Weekly Schedule</h4>
   <p>{{market.dayOpen}}</p>
   <p>{{market.timeOpen}}</p>
   <p>{{market.timeClose}}</p>
+  <h4>Monthly Schedule</h4>
   <p>{{market.monthsOpen}}</p>
-  <p>{{market.googleLink}}</p>
-  <p>{{market.email}}</p>
+  <!--   <p>{{market.googleLink}}</p> -->
+  <h4>Contact Information</h4>
   <p>{{market.phone}}</p>
-  <p>{{market.photoUrl}}</p>
-  <p>{{market.facebookUrl}}</p>
-  <p>{{market.twitterUrl}}</p>
-  <p>{{market.vendorsNumber}}</p>
-  <p>{{market.websiteUrl}}</p>
+  <p><a id="market_email" href="mailto:{{market.email}}">{{market.email}}</a></p>
+  <!--   <p>{{market.facebookUrl}}</p> -->
+  <!--   <p>{{market.twitterUrl}}</p> -->
+  <!--   <p>{{market.vendorsNumber}}</p> -->
+  <p><a href="{{market.websiteUrl}}">{{market.websiteUrl}}</a></p>
 
-  <ul>
+  <h4>Market Vendors</h4>
+
+  <ul id="market_vendors">
     {{#each vendors}}
     <li>
       <a href="/vendors/{{id}}">
