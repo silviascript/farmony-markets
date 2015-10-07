@@ -18,7 +18,7 @@ app.get('/db', function (request, response) {
        { response.render('pages/db', {results: result.rows} ); }
     });
   });
-})
+});
 
 // Connect bodyparser middleware.
 var bodyParser = require("body-parser");
@@ -33,7 +33,7 @@ var marketsController = require("./controllers/markets.js");
 
 
 // Connect search engine
-var search = require("./db/search.js")
+var search = require("./db/search.js");
 
 app.use("/public", express.static(path.join(__dirname + "/public")));
 app.use(express.static('public'));
@@ -53,15 +53,13 @@ app.use("/", marketsController);
 
 // Connect to the browser.
 app.get("/", function(req, res){
-  res.redirect("markets")
+    res.redirect("markets");
 });
 
 
 
 app.get("/search", function(req, res) {
-    var userMarketSearch = req.query.q
-    console.log("================================================================================================================")
-    console.log(req.query.q)
+    var userMarketSearch = req.query.q;
 
     Market.findAll({
         where: {
@@ -85,15 +83,15 @@ app.get("/search", function(req, res) {
             }).then(function(searchResults) {
                 res.render("markets/search", {
                     markets: searchResults
-                })
-            })
+                });
+            });
         } else
             res.render("markets/search", {
                 markets: searchResults
-            })
-    })
+            });
+    });
 
-})
+});
 
 
 // Create route for about.
