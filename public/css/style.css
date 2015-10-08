@@ -188,6 +188,32 @@ ul {
     color: #00BA9D;
     transition: 300ms; }
 
+.vendor {
+  /* display: inline-block; */
+  /* text-align: center; */
+  width: 30%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2; }
+
+.vendor h2 {
+  width: 20%;
+  height: 2em;
+  font-size: 2em;
+  text-align: center;
+  color: #00BA9D; }
+
+.vendor li {
+  width: 50%;
+  font-size: 1.5em; }
+
+#vendor_markets {
+  padding-top: 3em; }
+
+#vendor_markets li {
+  font-size: 1.3em; }
+
 .site-markets {
   border-right: 1px solid #69B580;
   overflow: scroll; }

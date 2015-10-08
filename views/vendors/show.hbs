@@ -1,26 +1,33 @@
-<div class="market-item">
+<div class="vendor market-item">
 
   <h1>{{market.name}}</h1>
 
   <h2>{{vendor.name}}</h2>
-    <p>{{vendor.addressStreet}}</p>
-    <p>{{vendor.addressCity}},</p>
-    <p>{{vendor.addressState}}</p>
-    <p>{{vendor.addressZip}}</p>
-    <p>{{vendor.product}}</p>
-    <p>{{vendor.email}}</p>
-    <p>{{vendor.websiteUrl}}</p>
-    <p>{{vendor.phone}}</p>
-    <p>{{vendor.mapUrl}}</p>
-    <p>{{vendor.paymentCard}}</p>
-    <p>{{vendor.paymentCash}}</p>
-    <p>{{vendor.paymentOther}}</p>
-    <p>{{vendor.paymentSnap}}</p>
-    <p>{{vendor.photoUrl}}</p>
-    <p>{{vendor.facebookUrl}}</p>
-    <p>{{vendor.twitterUrl}}</p>
+  <ul>
+    <li><h4>Address</h4></li>
+    <li>{{vendor.addressStreet}}</li>
+    <li>{{vendor.addressCity}},</li>
+    <li>{{vendor.addressState}}</li>
+    <li>{{vendor.addressZip}}</li>
+    <li><h4>Products</h4></li>
+    <li>{{vendor.product}}</li>
+    <li>{{vendor.email}}</li>
+    <li>{{vendor.websiteUrl}}</li>
+    <li>{{vendor.phone}}</li>
+    <li><a href="{{vendor.mapUrl}}">Google Maps</a></li>
+    <li><h4>Payment Methods</h4></li>
+    <li><span>Credit Card: </span>{{vendor.paymentCard}}</li>
+    <li><span>Cash: </span>{{vendor.paymentCash}}</li>
+    <!--     <li>{{vendor.paymentOther}}</li> -->
+    <!--     <li>{{vendor.paymentSnap}}</li> -->
+    <li><img src="{{vendor.photoUrl}}"></img> </li>
+    <!--     <li>{{vendor.facebookUrl}}</li> -->
+    <!--     <li>{{vendor.twitterUrl}}</li> -->
+  </ul>
 
-<ul>
+</div>
+<h4>Vendor's Markets</h4>
+<ul id="vendor_markets">
   {{#each markets}}
   <li>
     <a href="/markets/{{id}}">
