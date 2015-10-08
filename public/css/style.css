@@ -68,59 +68,103 @@ ul {
   line-height: 1.5; }
 
 #site-container {
-  align-items: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   height: 100%; }
 
 .site-content {
   margin-top: 10.667em; }
 
 .grid-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   width: 100%; }
 
 .grid-col {
   background-clip: content-box;
-  flex: 1 1 8%; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 8%;
+      -ms-flex: 1 1 8%;
+          flex: 1 1 8%; }
 
 .grid-col-1 {
-  flex-basis: 8.3333%; }
+  -webkit-flex-basis: 8.3333%;
+      -ms-flex-preferred-size: 8.3333%;
+          flex-basis: 8.3333%; }
 
 .grid-col-2 {
-  flex-basis: 16.6666%; }
+  -webkit-flex-basis: 16.6666%;
+      -ms-flex-preferred-size: 16.6666%;
+          flex-basis: 16.6666%; }
 
 .grid-col-3 {
-  flex-basis: 25%; }
+  -webkit-flex-basis: 25%;
+      -ms-flex-preferred-size: 25%;
+          flex-basis: 25%; }
 
 .grid-col-4 {
-  flex-basis: 33.3333%; }
+  -webkit-flex-basis: 33.3333%;
+      -ms-flex-preferred-size: 33.3333%;
+          flex-basis: 33.3333%; }
 
 .grid-col-5 {
-  flex-basis: 41.6666%; }
+  -webkit-flex-basis: 41.6666%;
+      -ms-flex-preferred-size: 41.6666%;
+          flex-basis: 41.6666%; }
 
 .grid-col-6 {
-  flex-basis: 50%; }
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
 
 .grid-col-7 {
-  flex-basis: 58.3333%; }
+  -webkit-flex-basis: 58.3333%;
+      -ms-flex-preferred-size: 58.3333%;
+          flex-basis: 58.3333%; }
 
 .grid-col-8 {
-  flex-basis: 66.6666%; }
+  -webkit-flex-basis: 66.6666%;
+      -ms-flex-preferred-size: 66.6666%;
+          flex-basis: 66.6666%; }
 
 .grid-col-9 {
-  flex-basis: 75%; }
+  -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+          flex-basis: 75%; }
 
 .grid-col-10 {
-  flex-basis: 83.3333%; }
+  -webkit-flex-basis: 83.3333%;
+      -ms-flex-preferred-size: 83.3333%;
+          flex-basis: 83.3333%; }
 
 .grid-col-11 {
-  flex-basis: 91.6666%; }
+  -webkit-flex-basis: 91.6666%;
+      -ms-flex-preferred-size: 91.6666%;
+          flex-basis: 91.6666%; }
 
 .grid-col-12 {
-  flex-basis: 100%; }
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
 
 .site-header {
   border-bottom: 1px solid #69B580;
@@ -137,9 +181,18 @@ ul {
 
 .nav-list {
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   line-height: 4.5em;
   overflow: hidden; }
   .nav-list .site-words {
@@ -147,11 +200,17 @@ ul {
     font-size: 0.833em;
     font-weight: 400; }
   .nav-list li {
-    flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     padding: 0 1em;
     text-align: center; }
   .nav-list li:nth-child(1) {
-    flex: 8 0 auto;
+    -webkit-box-flex: 8;
+    -webkit-flex: 8 0 auto;
+        -ms-flex: 8 0 auto;
+            flex: 8 0 auto;
     padding-left: 1.667em;
     text-align: left; }
   .nav-list a:link {
@@ -164,9 +223,18 @@ ul {
   background-color: #75C98E; }
   .site-search form {
     padding-left: 1.667em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; }
   .site-search input {
     border: none;
     border-radius: 0.25em;
@@ -175,7 +243,9 @@ ul {
     line-height: 3.333em;
     margin: 1.667em 0.833em 1.667em 0; }
   .site-search input[type="text"] {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     padding-left: 0.833em;
     width: 33.333em; }
   .site-search input[type="text"]:focus {
@@ -188,7 +258,8 @@ ul {
   .site-search input[type="submit"]:hover {
     background-color: #FFFFFF;
     color: #00BA9D;
-    transition: 300ms; }
+    -webkit-transition: 300ms;
+            transition: 300ms; }
 
 .vendor {
   /* display: inline-block; */
@@ -222,9 +293,18 @@ ul {
 
 .market-item {
   border-bottom: 1px solid #CFECD8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   line-height: 1.5em;
   padding: 1.667em; }
   .market-item div:nth-child(1) {
@@ -237,7 +317,10 @@ ul {
     padding-left: 0.833em;
     padding-right: 0.833em;
     padding-top: 0.500em;
-    flex: 1 1 0; }
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0;
+        -ms-flex: 1 1 0;
+            flex: 1 1 0; }
   .market-item div:nth-child(3) {
     min-width: 11.167em;
     padding-left: 0.833em;
@@ -306,5 +389,3 @@ a[href^="https://maps.google.com/maps"],
 
   .market-item div:nth-child(1), .site-footer, .site-map {
     display: block; } }
-
-/*# sourceMappingURL=style.css.map */
